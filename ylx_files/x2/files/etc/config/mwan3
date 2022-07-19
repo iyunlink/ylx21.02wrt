@@ -1,0 +1,161 @@
+
+config 'interface' 'wan'
+        option 'enabled' '1'
+        list 'track_ip' '223.5.5.5'
+        list 'track_ip' '8.8.8.8'
+        option 'reliability' '1'
+        option 'count' '1'
+        option 'timeout' '2'
+        option 'interval' '5'
+        option 'down' '3'
+        option 'up' '8'
+
+config 'interface' 'wwanA'
+        option 'enabled' '1'
+        list 'track_ip' '223.5.5.5'
+        list 'track_ip' '8.8.8.8'
+        option 'reliability' '1'
+        option 'count' '1'
+        option 'timeout' '2'
+        option 'interval' '5'
+        option 'down' '3'
+        option 'up' '8'
+
+config 'interface' 'lte1'
+        option 'enabled' '1'
+        list 'track_ip' '223.5.5.5'
+        list 'track_ip' '8.8.8.8'
+        option 'reliability' '1'
+        option 'count' '1'
+        option 'timeout' '2'
+        option 'interval' '5'
+        option 'down' '3'
+        option 'up' '8'
+
+config 'interface' 'lte2'
+        option 'enabled' '1'
+        list 'track_ip' '223.5.5.5'
+        list 'track_ip' '8.8.8.8'
+        option 'reliability' '1'
+        option 'count' '1'
+        option 'timeout' '2'
+        option 'interval' '5'
+        option 'down' '3'
+        option 'up' '8'
+
+config 'member' 'wan_m1'
+        option 'interface' 'wan'
+        option 'metric' '1'
+        option 'weight' '2'
+
+config 'member' 'wan_m2'
+        option 'interface' 'wan'
+        option 'metric' '2'
+        option 'weight' '2'
+
+config 'member' 'wan_m3'
+        option 'interface' 'wan'
+        option 'metric' '3'
+        option 'weight' '2'
+
+config 'member' 'wan_m4'
+        option 'interface' 'wan'
+        option 'metric' '4'
+        option 'weight' '2'
+
+
+config 'member' 'wwanA_m1'
+        option 'interface' 'wwanA'
+        option 'metric' '1'
+        option 'weight' '2'
+
+config 'member' 'wwanA_m2'
+        option 'interface' 'wwanA'
+        option 'metric' '2'
+        option 'weight' '2'
+
+config 'member' 'wwanA_m3'
+        option 'interface' 'wwanA'
+        option 'metric' '3'
+        option 'weight' '2'
+
+config 'member' 'wwanA_m4'
+        option 'interface' 'wwanA'
+        option 'metric' '4'
+        option 'weight' '2'
+
+config 'member' 'lte1_m1'
+        option 'interface' 'lte1'
+        option 'metric' '1'
+        option 'weight' '2'
+
+config 'member' 'lte1_m2'
+        option 'interface' 'lte1'
+        option 'metric' '2'
+        option 'weight' '2'
+
+config 'member' 'lte1_m3'
+        option 'interface' 'lte1'
+        option 'metric' '3'
+        option 'weight' '2'
+
+config 'member' 'lte1_m4'
+        option 'interface' 'lte1'
+        option 'metric' '4'
+        option 'weight' '2'
+
+config 'member' 'lte2_m1'
+        option 'interface' 'lte2'
+        option 'metric' '1'
+        option 'weight' '2'
+
+config 'member' 'lte2_m2'
+        option 'interface' 'lte2'
+        option 'metric' '2'
+        option 'weight' '2'
+
+config 'member' 'lte2_m3'
+        option 'interface' 'lte2'
+        option 'metric' '3'
+        option 'weight' '2'
+
+config 'member' 'lte2_m4'
+        option 'interface' 'lte2'
+        option 'metric' '4'
+        option 'weight' '2'
+
+
+config 'policy' 'wan_only'
+        list 'use_member' 'wan_m1'
+
+config 'policy' 'wwanA_only'
+        list 'use_member' 'wwanA_m1'
+
+config 'policy' 'lte1_only'
+        list 'use_member' 'lte1_m1'
+
+config 'policy' 'lte2_only'
+        list 'use_member' 'lte2_m1'
+
+config 'policy' 'wan_wwanA_lte1_lte2'
+        list 'use_member' 'wan_m1'
+        list 'use_member' 'wwanA_m2'
+        list 'use_member' 'lte1_m3'
+        list 'use_member' 'lte2_m3'
+
+
+config 'policy' 'balanced'
+        list 'use_member' 'wan_m1'
+        list 'use_member' 'wwanA_m1'
+        list 'use_member' 'lte1_m1'
+        list 'use_member' 'lte2_m1'
+
+config 'rule'
+        option 'dest_ip' '0.0.0.0/0'
+        option 'use_policy' 'wan_wwanA_lte1_lte2'
+
+config 'rule'
+        option 'dest_ip' '0.0.0.0/0'
+        option 'use_policy' 'balanced'
+
+

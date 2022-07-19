@@ -1,0 +1,5 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+/sbin/ltegpio.sh &
+# echo  nanqinlang > /proc/sys/net/ipv4/tcp_congestion_control
+exit 0

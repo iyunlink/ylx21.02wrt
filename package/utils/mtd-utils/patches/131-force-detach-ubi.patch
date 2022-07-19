@@ -1,0 +1,26 @@
+Index: mtd-utils-2.1.2/include/mtd/ubi-user.h
+===================================================================
+--- mtd-utils-2.1.2.orig/include/mtd/ubi-user.h
++++ mtd-utils-2.1.2/include/mtd/ubi-user.h
+@@ -176,6 +176,7 @@
+ #define UBI_IOCATT _IOW(UBI_CTRL_IOC_MAGIC, 64, struct ubi_attach_req)
+ /* Detach an MTD device */
+ #define UBI_IOCDET _IOW(UBI_CTRL_IOC_MAGIC, 65, int32_t)
++#define UBI_IOCFDET _IOW(UBI_CTRL_IOC_MAGIC, 99, int32_t)
+ 
+ /* ioctl commands of UBI volume character devices */
+ 
+Index: mtd-utils-2.1.2/lib/libubi.c
+===================================================================
+--- mtd-utils-2.1.2.orig/lib/libubi.c
++++ mtd-utils-2.1.2/lib/libubi.c
+@@ -843,6 +843,9 @@ int ubi_remove_dev(libubi_t desc, const
+ 	if (fd == -1)
+ 		return sys_errmsg("cannot open \"%s\"", node);
+ 	ret = ioctl(fd, UBI_IOCDET, &ubi_dev);
++	ret = ioctl(fd, UBI_IOCFDET, &ubi_dev);
++	if (ret == -1)
++		ret = ioctl(fd, UBI_IOCDET, &ubi_dev);
+ 	if (ret == -1)
+ 		goto out_close;
+ 

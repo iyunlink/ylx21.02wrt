@@ -1,0 +1,37 @@
+
+config 4G 4G
+	option apn '3gnet'
+	option user ''
+	option password ''
+	option enable '1'
+	option auth '0'
+	option netdevice 'wwan0'
+	option tool 'quectel-CM'
+
+config 4G 4G1
+	option apn '3gnet'
+	option user ''
+	option password ''
+	option enable '1'
+	option auth '0'
+	option netdevice 'wwan1'
+	option tool 'quectel-CM'
+
+config 4G 4G2
+	option apn '3gnet'
+	option user ''
+	option password ''
+	option enable '1'
+	option auth '0'
+	option netdevice 'usb0'
+	option tool 'quectel-CM'
+
+config 4G 4G3
+	option apn '3gnet'
+	option user ''
+	option password ''
+	option enable '1'
+	option auth '0'
+	option netdevice 'usb1'
+	option tool 'quectel-CM'
+

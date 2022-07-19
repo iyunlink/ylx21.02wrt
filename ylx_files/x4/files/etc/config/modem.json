@@ -1,0 +1,111 @@
+{
+    "V12d1P15c3": {
+        "name": "HuaWei MH5000",
+        "atDev": "/dev/ttyUSB1",
+        "dMothed": "at",
+        "dCmd": "at^ndisdup=1,1"
+    },
+    "V2c7cP0800": {
+        "name": "Quectel RM500Q",
+        "atDev": "/dev/ttyUSB2",
+        "dMothed": "quectel-CM"
+    },
+    "V2deeP4d22": {
+        "name": "MeiGe SRM815",
+        "netDev":"1.5",
+        "atDev": "1.2",
+        "dMothed": "quectel-CM"
+    },
+    "V1e2dP00b3": {
+        "name": "Thales T99W175",
+        "atDev": "/dev/ttyUSB0",
+        "dMothed": "meige-CM"
+    },
+    "V1e0eP9001": {
+        "name": "SimCOM SIM8200",
+        "netDev":"1.5",
+        "atDev": "1.2",
+        "dMothed": "meige-CM"
+    },
+    "V1782P4038": {
+        "name": "Haixing MNR01",
+        "atDev": "/dev/ttyUSB0",
+        "dMothed": "at",
+        "dCmd": "AT^NDISDUN=\\\"sipa_usb0\\\",1,1"
+    },
+    "V05c6P9091": {
+        "name": "Yidong F03X",
+        "atDev": "/dev/ttyUSB1",
+        "dMothed": "meige-CM"
+
+    },
+    "V05c6P90db": {
+        "name": "yiseacom",
+        "atDev": "/dev/ttyUSB1",
+        "dMothed": "meige-CM"
+    },
+    "V05c6P90d5": {
+        "name": "FOXCON",
+        "netDev":"1.2",
+        "atDev": "1.5",
+        "dMothed": "quectel-CM"
+    },
+    "V2949P8802": {
+        "name": "YouFANG N510M",
+        "atDev": "/dev/ttyUSB0",
+        "dMothed": "at",
+        "dCmd": "AT+NWNETSHAREACT=1,1,1"
+    },
+    "V2cb7P0a05":{
+        "name": "YanFei Fibcom",
+        "netDev":"1.0",
+        "atDev": "1.3",
+        "dMothed": "at",
+        "dCmd": "AT+GTRNDIS=1,1"
+    } ,
+    "V2cb7P0104": {
+        "name": "Fibocom FM150",
+        "atDev": "/dev/ttyUSB2",
+        "dMothed": "fibocom-CM"
+    },
+    "V2c7cP0900": {
+        "name": "RM500U",
+        "netDev":"1.0",
+        "atDev": "1.4",
+        "dMothed": "at",
+        "dCmd": "AT+QNETDEVCTL=1,1,1"
+    },
+    "V2c7cP0125": {
+        "name": "EC20",
+        "netDev":"1.4",
+        "atDev": "1.2",
+        "dMothed": "quectel-CM"
+    },
+    "V05c6Pf601": {
+        "name": "SLM750",
+        "netDev":"1.5",
+        "atDev": "1.2",
+        "dMothed": "quectel-CM"
+    },
+    "V2c7cP030a": {
+        "name": "EM05G",
+        "netDev":"1.6",
+        "atDev": "1.2",
+        "dMothed": "quectel-CM"
+    },
+    "V12d1P1506": {
+        "name": "EM350",
+        "netDev":"1.5",
+        "atDev": "1.2",
+        "dMothed": "at",
+        "dCmd": "ATI"
+    },
+    "V1286P4e3c": {
+        "name": "YuGe CLM920",
+        "netDev":"1.0",
+        "atDev": "1.3",
+        "dMothed": "at",
+        "dCmd": "ATI"
+    }
+
+}

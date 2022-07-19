@@ -1,0 +1,220 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+
+#include "qca953x.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+
+/ {
+	compatible = "ylx,x2", "qca,qca9531";
+	model = "YLX X2";
+
+	keys {
+		compatible = "gpio-keys";
+
+		reset {
+			label = "reset";
+			linux,code = <KEY_RESTART>;
+			gpios = <&gpio 17 GPIO_ACTIVE_LOW>;
+		};
+		lte1_sim_det {
+			label = "sim1";
+			linux,code = <BTN_1>;
+			gpios = <&gpio_ext 14 GPIO_ACTIVE_LOW>;
+		};
+		lte2_sim_det {
+			label = "sim2";
+			linux,code = <BTN_2>;
+			gpios = <&gpio_ext 15 GPIO_ACTIVE_LOW>;
+		};
+	};
+
+	leds {
+		compatible = "gpio-leds";
+
+		power {
+			label = "power";
+			gpios = <&gpio 12 GPIO_ACTIVE_LOW>;
+			default-state = "on";
+		};
+
+		wlan2g {
+			label = "wlan2g";
+			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
+			linux,default-trigger = "phy1tpt";
+		};
+
+		lte1led {
+			label = "lte1led";
+			gpios = <&gpio_ext 11 GPIO_ACTIVE_LOW>;
+		};
+
+		lte2led {
+			label = "lte2led";
+			gpios = <&gpio_ext 10 GPIO_ACTIVE_LOW>;
+		};
+
+		wan {
+			label = "wan";
+			gpios = <&gpio_ext 4 GPIO_ACTIVE_LOW>;
+		};
+
+		lan1 {
+			label = "lan1";
+			gpios = <&gpio_ext 0 GPIO_ACTIVE_LOW>;
+		};
+		lan2 {
+			label = "lan2";
+			gpios = <&gpio_ext 1 GPIO_ACTIVE_LOW>;
+		};
+		lan3 {
+			label = "lan3";
+			gpios = <&gpio_ext 2 GPIO_ACTIVE_LOW>;
+		};
+		lan4 {
+			label = "lan4";
+			gpios = <&gpio_ext 3 GPIO_ACTIVE_LOW>;
+		};
+
+	};
+
+		watchdog {
+			compatible = "linux,wdt-gpio";
+			gpios = <&gpio 0 GPIO_ACTIVE_LOW>;
+			pinctrl-0 = <&jtag_disable_pins>;
+			pinctrl-names = "default";
+			hw_algo = "toggle";
+			hw_margin_ms = <1600>;
+			always-running;
+		};
+
+
+		i2c {
+		compatible = "i2c-gpio";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		sda-gpios = <&gpio 2 GPIO_ACTIVE_HIGH>;
+		scl-gpios = <&gpio 1 GPIO_ACTIVE_HIGH>;
+
+		gpio_ext: gpio_ext@20 {
+			compatible = "nxp,pca9555";
+			reg = <0x20>;
+
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+	};
+
+	gpio-export {
+		compatible = "gpio-export";
+
+		lte1 {
+			label = "lte1";
+			gpio-export,name = "lte1";
+			gpio-export,output = <1>;
+			gpios = <&gpio 15 GPIO_ACTIVE_HIGH>;
+		};
+
+		lte2 {
+			label = "lte2";
+			gpio-export,name = "lte2";
+			gpio-export,output = <1>;
+			gpios = <&gpio 14 GPIO_ACTIVE_HIGH>;
+		};
+		sim1switch {
+			label = "sim1switch";
+			gpio-export,name = "sim1switch";
+			gpio-export,output = <1>;
+			gpios = <&gpio_ext 8 GPIO_ACTIVE_HIGH>;
+		};
+
+		sim2switch {
+			label = "sim2switch";
+			gpio-export,name = "sim2switch";
+			gpio-export,output = <1>;
+			gpios = <&gpio_ext 9 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+};
+
+&pcie0 {
+	status = "okay";
+};
+
+&usb0 {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	status = "okay";
+
+	hub_port: port@1 {
+		reg = <1>;
+		#trigger-source-cells = <0>;
+	};
+};
+
+&usb_phy {
+	status = "okay";
+};
+
+&spi {
+	status = "okay";
+
+	flash@0 {
+		compatible = "jedec,spi-nor";
+		reg = <0>;
+		spi-max-frequency = <25000000>;
+
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			partition@0 {
+				label = "u-boot";
+				reg = <0x000000 0x040000>;
+				read-only;
+			};
+
+			partition@40000 {
+				label = "u-boot-env";
+				reg = <0x040000 0x010000>;
+			};
+
+			partition@50000 {
+				compatible = "denx,uimage";
+				label = "firmware";
+				reg = <0x050000 0xfa0000>;
+			};
+
+			art: partition@ff0000 {
+				label = "art";
+				reg = <0xff0000 0x010000>;
+				// read-only;
+			};
+
+		};
+	};
+};
+
+
+&eth0 {
+	status = "okay";
+
+	phy-handle = <&swphy4>;
+
+	mtd-mac-address = <&art 0x1002>;
+};
+
+&eth1 {
+	mtd-mac-address = <&art 0x1002>;
+	mtd-mac-address-increment = <1>;
+};
+
+&wmac {
+	status = "okay";
+
+	mtd-cal-data = <&art 0x1000>;
+};

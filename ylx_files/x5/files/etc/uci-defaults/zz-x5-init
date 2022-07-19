@@ -1,0 +1,110 @@
+#!/bin/sh
+
+# uci set network.lan.ipaddr='192.168.11.1'
+uci set network.lte1=interface
+uci set network.lte1.proto=dhcp
+uci set network.lte1.device=wwan0
+uci set network.lte1.metric=4
+
+uci set network.lte2=interface
+uci set network.lte2.proto=dhcp
+uci set network.lte2.device=wwan1
+uci set network.lte2.metric=5
+
+uci set network.lte3=interface
+uci set network.lte3.proto=dhcp
+uci set network.lte3.device=wwan2
+uci set network.lte3.metric=6
+
+uci set network.lte4=interface
+uci set network.lte4.proto=dhcp
+uci set network.lte4.device=wwan3
+uci set network.lte4.metric=7
+
+uci set network.vpn=interface
+uci set network.vpn.proto=dhcp
+uci set network.vpn.device=tun0
+uci set network.vpn.metric=0
+uci set network.wan.metric=1
+
+uci set network.wwanA=interface
+uci set network.wwanA.proto=dhcp
+uci set network.wwanA.device=wlan00
+uci set network.wwanA.metric=2
+
+uci set network.wwanB=interface
+uci set network.wwanB.proto=dhcp
+uci set network.wwanB.device=wlan11
+uci set network.wwanB.metric=3
+
+uci set network.globals.multipath=enable
+uci set network.lte1.multipath='on'
+uci set network.lte2.multipath='on'
+uci set network.lte3.multipath='on'
+uci set network.lte4.multipath='on'
+uci set network.wan.multipath='on'
+uci set network.wan6.multipath='on'
+uci set network.wwanA.multipath='on'
+uci set network.wwanB.multipath='on'
+uci set network.vpn.multipath='off'
+uci commit network
+
+uci set firewall.@zone[1].input='ACCEPT'
+uci add_list firewall.@zone[1].network=wwanA
+uci add_list firewall.@zone[1].network=wwanB
+uci add_list firewall.@zone[1].network=lte1
+uci add_list firewall.@zone[1].network=lte2
+uci add_list firewall.@zone[1].network=lte3
+uci add_list firewall.@zone[1].network=lte4
+uci add_list firewall.@zone[1].network=vpn
+uci commit firewall
+
+uci set wireless.sta1='wifi-iface'
+uci set wireless.sta1.device='radio0'
+uci set wireless.sta1.ifname='wlan00'
+uci set wireless.sta1.mode='sta'
+uci set wireless.sta1.network='wwanA'
+uci set wireless.sta1.ssid='xxxx'
+uci set wireless.sta1.encryption='psk2'
+uci set wireless.sta1.key='12345678'
+uci set wireless.sta1.disabled='1'
+uci set wireless.default_radio0.ifname='wlan0'
+uci set wireless.default_radio1.ifname='wlan1'
+uci set wireless.sta2='wifi-iface'
+uci set wireless.sta2.device='radio1'
+uci set wireless.sta2.ifname='wlan11'
+uci set wireless.sta2.mode='sta'
+uci set wireless.sta2.network='wwanB'
+uci set wireless.sta2.ssid='xxxx'
+uci set wireless.sta2.encryption='psk2'
+uci set wireless.sta2.key='12345678'
+uci set wireless.sta2.disabled='1'
+
+# uci set wireless.radio1.htmode="HE40"
+# uci set wireless.radio1.noscan=1
+# uci set wireless.radio1.ht_coex=1
+uci commi wireless
+
+uci set system.@system[0].hostname="X5"
+uci commit system
+
+uci set rpcd.@login[-1].username='admin'
+uci set rpcd.@login[-1].password='$p$admin'
+uci commit rpcd
+
+. /lib/functions.sh
+. /lib/functions/system.sh
+mac=`mtd_get_mac_binary "0:ART" 4110 |tr -d ':'`
+uci set 4g.server.sn="${mac}"
+uci commit 4g
+
+uci set dhcp.lan.dhcp_option="6,8.8.8.8,223.5.5.5"
+uci commit dhcp
+
+/etc/init.d/rpcd restart &
+
+/etc/init.d/network restart &
+
+cp /etc/uhttpd.conf.gargoyle /etc/config/uhttpd
+
+/etc/init.d/uhttpd restart &

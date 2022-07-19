@@ -1,0 +1,20 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:iyunlink/ylx21.02wrt 
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "gitee"]
+	url = git@gitee.com:link4all_admin/ylxwrt21.02 
+#url = https://gitee.com/link4all_admin/ylxwrt21.02 
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "openwrt-22.03"]
+	remote = origin
+	merge = refs/heads/openwrt-22.03
+[http]
+	postBuffer = 524288000
+[branch "openwrt-21.02"]
+	remote = gitee
+	merge = refs/heads/openwrt-21.02

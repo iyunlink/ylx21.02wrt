@@ -1,0 +1,9 @@
+[ ifup = "$ACTION" ] && {
+	uci_toggle_state network "$INTERFACE" up 1
+	[ -n "$DEVICE" ] && {
+		uci_toggle_state network "$INTERFACE" ifname "$DEVICE"
+	}
+    [ "uci get shadowsocksr.@global[0].global_server" != "nil"  ] && {
+    /etc/init.d/shadowsocksr restart &
+    }
+}

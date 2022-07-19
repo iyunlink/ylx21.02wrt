@@ -1,0 +1,15 @@
+[ ifup = "$ACTION" ] && {
+	uci_toggle_state network "$INTERFACE" up 1
+	[ -n "$DEVICE" ] && {
+		uci_toggle_state network "$INTERFACE" ifname "$DEVICE"
+	}
+   /etc/init.d/shadowsocksr restart &
+}
+
+[ ifup = "$ACTION" ] && {
+	case $INTERFACE in
+	wan|lte1|lte2|lte3|lte4|wwanA|wwanB)
+		/etc/init.d/shadowsocksr restart &
+		;;
+	esac
+}
