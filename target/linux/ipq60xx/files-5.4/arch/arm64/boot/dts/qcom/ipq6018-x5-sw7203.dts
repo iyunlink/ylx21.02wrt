@@ -10,8 +10,8 @@
 / {
 	#address-cells = <0x2>;
 	#size-cells = <0x2>;
-	model = "YLX X8";
-	compatible = "ylx,x8", "qcom,ipq6018";
+	model = "YLX X5";
+	compatible = "ylx,x5", "qcom,ipq6018";
 	interrupt-parent = <&intc>;
 	qcom,msm-id = <0x1A5 0x0>;
 
@@ -152,7 +152,7 @@
 			qcom,phy-mdio-addr = <28>;
 			phy-mode = "sgmii";
 		};
-		
+
 		gpio_keys {
 			compatible = "gpio-keys";
 			pinctrl-0 = <&button_pins>;
@@ -165,239 +165,65 @@
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
-			// sim11 {
-			// 	label = "sim11";
-			// 	linux,code = <BTN_0>;
-			// 	gpios = <&aw9523b1 3 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim21 {
-			// 	label = "sim21";
-			// 	linux,code = <BTN_1>;
-			// 	gpios = <&aw9523b1 2 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim31 {
-			// 	label = "sim31";
-			// 	linux,code = <BTN_1>;
-			// 	gpios = <&aw9523b1 1 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim41 {
-			// 	label = "sim41";
-			// 	linux,code = <BTN_3>;
-			// 	gpios = <&aw9523b1 0 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim12 {
-			// 	label = "sim12";
-			// 	linux,code = <BTN_4>;
-			// 	gpios = <&aw9523b1 7 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim22 {
-			// 	label = "sim22";
-			// 	linux,code = <BTN_5>;
-			// 	gpios = <&aw9523b1 6 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim32 {
-			// 	label = "sim32";
-			// 	linux,code = <BTN_6>;
-			// 	gpios = <&aw9523b1 5 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim42 {
-			// 	label = "sim42";
-			// 	linux,code = <BTN_7>;
-			// 	gpios = <&aw9523b1 4 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-
-			// sim51 {
-			// 	label = "sim51";
-			// 	linux,code = <BTN_8>;
-			// 	gpios = <&aw9523b2 3 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim61 {
-			// 	label = "sim61";
-			// 	linux,code = <BTN_9>;
-			// 	gpios = <&aw9523b2 2 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim71 {
-			// 	label = "sim71";
-			// 	linux,code = <KEY_0>;
-			// 	gpios = <&aw9523b2 1 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim81 {
-			// 	label = "sim81";
-			// 	linux,code = <KEY_1>;
-			// 	gpios = <&aw9523b2 0 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim52 {
-			// 	label = "sim52";
-			// 	linux,code = <KEY_2>;
-			// 	gpios = <&aw9523b2 7 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim62 {
-			// 	label = "sim62";
-			// 	linux,code = <KEY_3>;
-			// 	gpios = <&aw9523b2 6 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim72 {
-			// 	label = "sim72";
-			// 	linux,code = <KEY_4>;
-			// 	gpios = <&aw9523b2 5 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
-			// sim82 {
-			// 	label = "sim82";
-			// 	linux,code = <KEY_5>;
-			// 	gpios = <&aw9523b2 4 GPIO_ACTIVE_LOW>;
-			// 	linux,input-type = <1>;
-			// 	debounce-interval = <60>;
-			// };
 		};
 
 		gpio-export {
-		compatible = "gpio-export";
-
-		fan {
-			label = "fan";
-			gpio-export,name = "fan";
-			gpio-export,output = <1>;
-			gpios = <&tlmm 29 GPIO_ACTIVE_HIGH>;
+			compatible = "gpio-export";
+			fan {
+				label = "fan";
+				gpio-export,name = "fan";
+				gpio-export,output = <1>;
+				gpios = <&tlmm 29 GPIO_ACTIVE_HIGH>;
+			};
+			lte1 {
+				label = "lte1";
+				gpio-export,name = "lte1";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 15 GPIO_ACTIVE_HIGH>;
+			};
+			lte2 {
+				label = "lte2";
+				gpio-export,name = "lte2";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 14 GPIO_ACTIVE_HIGH>;
+			};
+			lte3 {
+				label = "lte3";
+				gpio-export,name = "lte3";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 13 GPIO_ACTIVE_HIGH>;
+			};
+			lte4 {
+				label = "lte4";
+				gpio-export,name = "lte4";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 12 GPIO_ACTIVE_HIGH>;
+			};
+			lte1i {
+				label = "lte1i";
+				gpio-export,name = "lte1i";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 8 GPIO_ACTIVE_HIGH>;
+			};
+			lte2i {
+				label = "lte2i";
+				gpio-export,name = "lte2i";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 9 GPIO_ACTIVE_HIGH>;
+			};
+			lte3i {
+				label = "lte3i";
+				gpio-export,name = "lte3i";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 10 GPIO_ACTIVE_HIGH>;
+			};
+			lte4i {
+				label = "lte4i";
+				gpio-export,name = "lte4i";
+				gpio-export,output = <1>;
+				gpios = <&aw9523b 11 GPIO_ACTIVE_HIGH>;
+			};
 		};
-
-		lte1 {
-			label = "lte1";
-			gpio-export,name = "lte1";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 11 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte2 {
-			label = "lte2";
-			gpio-export,name = "lte2";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 10 GPIO_ACTIVE_HIGH>;
-		};
-		lte3 {
-			label = "lte3";
-			gpio-export,name = "lte3";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 9 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte4 {
-			label = "lte4";
-			gpio-export,name = "lte4";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 8 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte5 {
-			label = "lte5";
-			gpio-export,name = "lte5";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 11 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte6 {
-			label = "lte6";
-			gpio-export,name = "lte6";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 10 GPIO_ACTIVE_HIGH>;
-		};
-		lte7 {
-			label = "lte7";
-			gpio-export,name = "lte7";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 9 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte8 {
-			label = "lte8";
-			gpio-export,name = "lte8";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 8 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte1i {
-			label = "lte1i";
-			gpio-export,name = "lte1i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 12 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte2i {
-			label = "lte2i";
-			gpio-export,name = "lte2i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 13 GPIO_ACTIVE_HIGH>;
-		};
-		lte3i {
-			label = "lte3i";
-			gpio-export,name = "lte3i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 14 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte4i {
-			label = "lte4i";
-			gpio-export,name = "lte4i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b1 15 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte5i {
-			label = "lte5i";
-			gpio-export,name = "lte5i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 12 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte6i {
-			label = "lte6i";
-			gpio-export,name = "lte6i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 13 GPIO_ACTIVE_HIGH>;
-		};
-		lte7i {
-			label = "lte7i";
-			gpio-export,name = "lte7i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 14 GPIO_ACTIVE_HIGH>;
-		};
-
-		lte8i {
-			label = "lte8i";
-			gpio-export,name = "lte8i";
-			gpio-export,output = <1>;
-			gpios = <&aw9523b2 15 GPIO_ACTIVE_HIGH>;
-		};
-	};
 
 		leds {
 			compatible = "gpio-leds";
@@ -416,13 +242,13 @@
 
 			led_sys: sys {
 				label = "sys";
-				gpios = <&tlmm 34 GPIO_ACTIVE_HIGH>;
+				gpios = <&tlmm 66 GPIO_ACTIVE_HIGH>;
 			};
 
-			// modem {
-			// 	label = "red:modem";
-			// 	gpios = <&tlmm 67 GPIO_ACTIVE_HIGH>;
-			// };
+			modem {
+				label = "modem";
+				gpios = <&tlmm 67 GPIO_ACTIVE_HIGH>;
+			};
 		};
 
 		watchdog {
@@ -472,7 +298,7 @@
 			pins = "gpio68","gpio70";
 			function = "gpio";
 			drive-strength = <8>;
-			bias-pull-up;
+			bias-pull-down;
 		};
 	};
 
@@ -493,15 +319,6 @@
 			bias-disable;
 		};
 	};
-
-	// aw9523_irq2: aw9523_irq2 {
-	// 	mux {
-	// 		pins = "gpio52";
-	// 		function = "gpio";
-	// 		drive-strength = <8>;
-	// 		bias-disable;
-	// 	};
-	// };
 
 	mdio_pins: mdio_pinmux {
 		mux_0 {
@@ -567,7 +384,7 @@
 		};
 
 		sys {
-			pins = "gpio34";
+			pins = "gpio66";
 			function = "gpio";
 			drive-strength = <8>;
 			bias-pull-down;
@@ -719,23 +536,23 @@
 	pinctrl-names = "default";
 	clock-frequency  = <400000>;
 	status = "ok";
-			// axp2402@46{
-			// 	compatible = "X-Powers, axp2402";
-			// 	reg = <0x46>;
-			// 	status = "ok";
-			// 	axp2402-charger{
-			// 		compatible = "X-Powers, axp2402-charger";
-			// 		pinctrl-0 = <&axp2402_irq>;
-			// 		pinctrl-names = "default";
-			// 		irqpin-gpios = <&tlmm 33 GPIO_ACTIVE_LOW>;
-			// 		ichg_cc = <4096>;			//最大充电电流
-			// 		idpm = <4096>;				//最大输入电流
-			// 		chg_target_voltage = <8440>;	//电池电压
-			// 		vsys_min=<5400>;         //设置放电保护电压
-			// 		battery_max_capacity = <15000>;	//电池最大容量
-			// 		status = "disabled";
-			// 		};
-			// 	};
+	// axp2402@46{
+	// 		compatible = "X-Powers, axp2402";
+	// 		reg = <0x46>;
+	// 		status = "ok";
+	// 		axp2402-charger{
+	// 			compatible = "X-Powers, axp2402-charger";
+	// 			pinctrl-0 = <&axp2402_irq>;
+	// 			pinctrl-names = "default";
+	// 			irqpin-gpios = <&tlmm 33 GPIO_ACTIVE_LOW>;
+	// 			ichg_cc = <1536>;			//最大充电电流
+	// 			idpm = <3072>;				//最大输入电流
+	// 			chg_target_voltage = <8440>;	//电池电压
+	// 			vsys_min=<5400>;         //设置放电保护电压
+	// 			battery_max_capacity = <15000>;	//电池最大容量
+	// 			status = "ok";
+	// 			};
+	// 		};
 	SW7203: SW7203@3C {
 		status = "okay";
 		compatible = "SW7203";
@@ -776,90 +593,60 @@
 		
 		//config the charge setting
 		ChargFulStopCur  = <80>;//ma,充满截止电流
-		ChargBatNum      = <3>;//电池节数
+		ChargBatNum      = <2>;//电池节数
 		DIE_OT_TEMP      = <120>;//℃,可选120,130,140,150
 		PeakCurrent      = <18>; //A,可选12,14,16,18
 		Mode62368EN      = <0>;//使能,1:禁止
 		TrickCurTime     = <240>;//minutes,可选30,60,120,240
 		ConstCurTime     = <72>;//hours,可选12,24,48,72
-		TrickVol         = <87>;//实际值=vaule*0.1V
-		TrickCur         = <100>;//ma,可选100,200,300,400
-		TrickVolDly      = <3>;//实际值=vaule*0.1V，value为电池节数
-		ChargVbusUV      = <44>;//实际值=vaule*0.1V
-		ChargVbusInputCL = <3700>;//ma
+		TrickVol         = <87>;//实际值=vaule*0.1V  //寄存器0x36
+		TrickCur         = <100>;//ma,可选100,200,300,400 //寄存器0x37下面有
+		TrickVolDly      = <2>;//实际值=vaule*0.1V，value为电池节数 //寄存器0x37下面有
+		ChargVbusUV      = <44>;//实际值=vaule*0.1V //寄存器0x38
+		ChargVbusInputCL = <3700>;//ma //寄存器0x39
 
         /********************************/
-		WorkMode		= <16>;//0x0D寄存器 工作模式控制 16:打开充电开关 0：关闭充电开关
+		// WorkMode		= <16>;//0x0D寄存器 工作模式控制 16:打开充电开关 0：关闭充电开关
 		//    SW7203_0C           = <255>;
-		SW7203_0D           = <16>; //打开充电，同上工作模式控制
+		SW7203_0D           = <10>; //打开充电，同上工作模式控制
 		SW7203_0F           = <1>;  //设置复位检测
 		//   SW7203_10           = <255>;//
 		SW7203_18           = <19>; //负载接入检测及低功耗模式控制
 		//   SW7203_19           = <255>;
 		//   SW7203_1A           = <255>;
-		//   SW7203_20           = <255>;
+		SW7203_20           = <192>; //开关频率设置为1M,
 		SW7203_21           = <170>; //放电设置2 死区设置40nS
 		//    SW7203_22           = <48>;
-		SW7203_23           = <112>; //放电VBUS输出电压设置高8bits 
-		SW7203_24           = <4>; //放电VBUS输出电压设置低 3bits //3V+900*10mV=12V
+		SW7203_23           = <67>; //放电VBUS输出电压设置高8bits 
+		SW7203_24           = <4>; //放电VBUS输出电压设置低 3bits //3V+540*10mV=8.4V
 		//  SW7203_25           = <255>;
 		//  SW7203_26           = <255>;
-		SW7203_27           = <55>; //放电VBAT欠压设置 //2.7V+5.5V=8.2V
+		SW7203_27           = <35>; //放电VBAT欠压设置 //2.7V+3.5V=6.2V
 		//  SW7203_28           = <255>;
-		SW7203_30           = <130>;//bit7设置为1移除适配器保持充电设置，bit0-1电池节数
+		SW7203_30           = <193>;//bit7设置为1移除适配器保持充电设置，bit0-1电池节数 2节
 		//   SW7203_31           = <255>;
 		//   SW7203_32           = <255>;
 		//   SW7203_33           = <255>;
-		SW7203_34           = <120>; //充电目标电压设置高 8bits
-		SW7203_35           = <0>;   //充电目标电压设置低 3bits  //3V+9.6V=12.6V
-		SW7203_36           = <62>;  //涓流电压设置 2.5V+6.2V=8.7V (3节电池*2.9V=8.7V)
-		SW7203_37           = <14>;  //涓流电流设置//bit2-3:400mA , bit0-1:0.3V(每节电池0.1V)
-		SW7203_38           = <79>;  //充电 VBUS 限压设置 4V+7.9V=11.9V 最高22V
-		SW7203_39           = <90>;  //充电 VBUS 输入限流设置 500mA+90*50mA=5A 最大可设置为6.85A
-		SW7203_3A           = <29>;  //充电 VBAT 输入限流设置 100mA+29*100mA=3A,最大可设置12A
+		SW7203_34           = <67>; //充电目标电压设置高 8bits
+		SW7203_35           = <4>;   //充电目标电压设置低 3bits  //3V+5.4V=8.4V
+		SW7203_36           = <33>;  //涓流电压设置 2.5V+2.3V=5.8V (3节电池*2.9V=8.7V)
+		SW7203_37           = <5>;  //涓流电流设置//bit2-3: 1 : 200mA , bit0-1: 1:0.2V(每节电池0.1V)
+		SW7203_38           = <60>;  //充电 VBUS 限压设置 4V+6V=10V 最高22V
+		SW7203_39           = <100>;  //充电 VBUS 输入限流设置 500mA+100*50mA=5.5A 最大可设置为6.85A
+		SW7203_3A           = <39>;  //充电 VBAT 输入限流设置 100mA+39*100mA=4A,最大可设置12A
 		//   SW7203_40           = <255>;
 		//   SW7203_41           = <255>;
 		//   SW7203_42           = <255>;
-		/********************************/
-
-        
+		/********************************/    
 	};
-			
-			// bq24735@9 {
-			// 	compatible = "ti,bq24735";
-			// 	reg = <0x9>;
-			// 	ti,charge-voltage = <0x2100>;//bit13 8192mv + bit8 256mV = 8448mV reg:0x15
-			// 	ti,charge-current = <0x800>;//bit11 2048mA reg:0x14
-			// 	ti,input-current = <0xc00>; //bit11 2048mA +bit10 1024mA =3072mA reg:0x3f
-			// 	interrupts = <&tlmm 33 GPIO_ACTIVE_LOW>;
-			// };
 
-			ina220@44 {
-				compatible = "ti,ina226";
-				reg = <0x44>;
-				shunt-resistor = <10>;
-			};
-
-			aw9523b1: gpio-expander@58 {
+			aw9523b: gpio-expander@58 {
 				compatible = "awinic,aw9523b-gpio";
 				reg = <0x58>;
 				pinctrl-names = "default";
 				pinctrl-0 = <&aw9523_irq>;
 				interrupt-parent = <&tlmm>;
 				interrupts = <51 IRQ_TYPE_LEVEL_LOW>;
-				gpio-controller;
-				#gpio-cells = <2>;
-				interrupt-controller;
-				#interrupt-cells = <2>;
-				wakeup-source;
-			};
-			aw9523b2: gpio-expander@59{
-				compatible = "awinic,aw9523b-gpio";
-				reg = <0x59>;
-				pinctrl-names = "default";
-				// pinctrl-0 = <&aw9523_irq>;
-				// interrupt-parent = <&tlmm>;
-				// interrupts = <51 IRQ_TYPE_LEVEL_LOW>;
 				gpio-controller;
 				#gpio-cells = <2>;
 				interrupt-controller;
@@ -873,49 +660,41 @@
 	pinctrl-names = "default";
 	cs-select = <0>;
 	status = "ok";
-	// ili9341@0 {
-	// 	#address-cells = <1>;
-	// 	#size-cells = <1>;
-	// 	compatible = "ilitek,ili9341";
-	// 	reg = <0>;
-	// 	spi-max-frequency = <4000000>;
-	// 	//txbuflen = <16>;
-	// 	rotate = <270>;
-	// 	bgr;
-	// 	fps = <10>;
-	// 	buswidth = <8>;
-	// 	// dc-gpios = <&tlmm 70 GPIO_ACTIVE_LOW>;
-	// 	// reset-gpios = <&tlmm 68 GPIO_ACTIVE_LOW>;
-	// 	dc-gpios = <&tlmm 70 GPIO_ACTIVE_HIGH>;
-	// 	reset-gpios  = <&tlmm 68 GPIO_ACTIVE_HIGH>;
-	// 	debug = <0>;
-	// };
-	st7796@0 {
+	ili9341@0 {
 		#address-cells = <1>;
 		#size-cells = <1>;
-		compatible = "sitronix,st7796";
+		compatible = "ilitek,ili9341";
 		reg = <0>;
-		spi-max-frequency = <32000000>;
-		// txbuflen = <16>;
-		rotate = <0>;
+		spi-max-frequency = <4000000>;
+		//txbuflen = <16>;
+		rotate = <270>;
 		bgr;
 		fps = <10>;
 		buswidth = <8>;
+		// dc-gpios = <&tlmm 70 GPIO_ACTIVE_LOW>;
+		// reset-gpios = <&tlmm 68 GPIO_ACTIVE_LOW>;
 		dc-gpios = <&tlmm 70 GPIO_ACTIVE_HIGH>;
-		reset-gpios = <&tlmm 68 GPIO_ACTIVE_HIGH>;
+		reset-gpios  = <&tlmm 68 GPIO_ACTIVE_HIGH>;
 		debug = <0>;
-		//gamma = "d0,00,02,07,0b,1a,31,54,40,29,12,12,12,17;d0,00,02,07,05,25,2d,44,45,1c,18,16,1c,1d";
-		};
+	};
+	// st7789v@0 {
+	// 	#address-cells = <1>;
+	// 	#size-cells = <1>;
+	// 	compatible = "sitronix,st7789v";
+	// 	reg = <0>;
+	// 	spi-max-frequency = <2000000>;
+	// 	// txbuflen = <16>;
+	// 	rotate = <270>;
+	// 	bgr;
+	// 	fps = <5>;
+	// 	buswidth = <8>;
+	// 	dc-gpios = <&tlmm 70 GPIO_ACTIVE_LOW>;
+	// 	reset-gpios = <&tlmm 68 GPIO_ACTIVE_LOW>;
+	// 	debug = <0>;
+	// 	gamma = "d0,00,02,07,0b,1a,31,54,40,29,12,12,12,17;d0,00,02,07,05,25,2d,44,45,1c,18,16,1c,1d";
+	// 	};
 };
 
 &rpm_glink {
 	status = "disabled";
-};
-
-&pcie_phy {
-	status = "ok";
-};
-
-&pcie0 {
-	status = "ok";
 };

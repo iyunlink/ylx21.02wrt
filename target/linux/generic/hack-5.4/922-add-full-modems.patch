@@ -20,7 +20,7 @@ Index: linux-5.4.179/drivers/usb/serial/option.c
  /* Device flags */
  
  /* Highest interface number which can be used with NCTRL() and RSVD() */
-@@ -585,6 +596,76 @@ static void option_instat_callback(struc
+@@ -585,6 +596,77 @@ static void option_instat_callback(struc
  
  
  static const struct usb_device_id option_ids[] = {
@@ -75,6 +75,7 @@ Index: linux-5.4.179/drivers/usb/serial/option.c
 +	{ USB_DEVICE(0x05c6, 0xf601), .driver_info = RSVD(4)|RSVD(5) },
 +//add Meig slm790
 +	{ USB_DEVICE(0x2dee,0x4d20), .driver_info = RSVD(0) },
++	{ USB_DEVICE(0x2dee,0x4d57), .driver_info = RSVD(0) |RSVD(1)},
 +//add end
 +//add Quectel EC200T
 +	{ USB_DEVICE(0x2c7c, 0x6026) },

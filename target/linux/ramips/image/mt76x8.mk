@@ -822,6 +822,13 @@ define Device/zbtlink_zbt-we1226
 endef
 TARGET_DEVICES += zbtlink_zbt-we1226
 
+define Device/ylx_m64
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := ylx
+  DEVICE_MODEL := m64
+endef
+TARGET_DEVICES += ylx_m64
+
 define Device/zyxel_keenetic-extra-ii
   IMAGE_SIZE := 14912k
   BLOCKSIZE := 64k

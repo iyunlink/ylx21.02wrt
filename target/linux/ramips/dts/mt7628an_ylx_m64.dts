@@ -1,0 +1,130 @@
+#include "mt7628an.dtsi"
+
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+	compatible = "ylx,m64", "mediatek,mt7628an-soc";
+	model = "m64";
+
+	aliases {
+		led-boot = &led_wlan;
+		led-failsafe = &led_wlan;
+		led-running = &led_wlan;
+		led-upgrade = &led_wlan;
+	};
+
+	chosen {
+		bootargs = "console=ttyS0,115200";
+	};
+
+	keys {
+		compatible = "gpio-keys";
+
+		reset {
+			label = "reset";
+			gpios = <&gpio 38 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_RESTART>;
+		};
+		sim {
+			label = "BTN_0";
+			gpios = <&gpio 11 1>; //gpio11 
+			linux,code = <0x100>;
+			
+		};
+	};
+
+	leds {
+		compatible = "gpio-leds";
+
+		wifi {
+			label = "m64:wifi";
+			gpios = <&gpio 44 0>; //gpio44
+		};
+		lte {
+			label = "m64:lte";
+			gpios = <&gpio 0 1>; //gpio1
+		};
+	};
+
+
+	watchdog_0:watchdog {
+		compatible = "linux,wdt-gpio";
+		gpios = <&gpio 2 1>; //gpio2
+		hw_algo = "toggle";
+		hw_margin_ms = <1600>;
+		always-running = <1>;
+		status = "okay";
+	};
+
+	uart1@d00 {
+		status = "okay";
+	};
+};
+
+&state_default {
+	gpio {
+		groups = "gpio","perst","refclk","wdt","i2c","i2s","wled_an";
+		function = "gpio";
+	};
+	p4led_an{
+				ralink,group = "p4led_an";
+				ralink,function = "p4led_an";
+	};
+	p1led_an{
+				ralink,group = "p1led_an";
+				ralink,function = "p1led_an";
+	};
+};
+
+&spi0 {
+	status = "okay";
+
+	flash@0 {
+		compatible = "jedec,spi-nor";
+		reg = <0>;
+		spi-max-frequency = <10000000>;
+
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			partition@0 {
+				label = "u-boot";
+				reg = <0x0 0x30000>;
+				read-only;
+			};
+
+			partition@30000 {
+				label = "u-boot-env";
+				reg = <0x30000 0x10000>;
+				read-only;
+			};
+
+			factory: partition@40000 {
+				label = "factory";
+				reg = <0x40000 0x10000>;
+				read-only;
+			};
+
+			partition@50000 {
+				compatible = "denx,uimage";
+				label = "firmware";
+				reg = <0x50000 0xfb0000>;
+			};
+		};
+	};
+};
+
+&wmac {
+	status = "okay";
+};
+
+&ethernet {
+	mtd-mac-address = <&factory 0x2e>;
+};
+
+&esw {
+	mediatek,portmap = <0x2f>;
+};
