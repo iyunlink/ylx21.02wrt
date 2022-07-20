@@ -17,6 +17,8 @@
 /overlay
 /package/feeds
 /package/link4all
+/package/qca
+/package/ramips
 /package/openwrt-packages
 /*.patch
 key-build*
