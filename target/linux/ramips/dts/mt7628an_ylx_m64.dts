@@ -37,7 +37,7 @@
 	leds {
 		compatible = "gpio-leds";
 
-		wifi {
+		led_wlan: wifi {
 			label = "m64:wifi";
 			gpios = <&gpio 44 0>; //gpio44
 		};
