@@ -141,7 +141,7 @@ zbtlink,zbt-we1226)
 	ucidef_set_led_switch "wan" "WAN" "green:wan" "switch0" "0x10"
 	;;
 *m64)
-	ucidef_set_led_netdev "wifi_led" "wifi" "m64:wifi" "wlan0"
+	ucidef_set_led_timer "wifi_led" "wifi" "m64:wifi" "200" "200"
 	;;
 zyxel,keenetic-extra-ii)
 	ucidef_set_led_netdev "wifi_led" "wifi" "green:wifi" "wlan0"
