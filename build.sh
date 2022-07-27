@@ -107,6 +107,9 @@ case $1 in
          elif [ "$2" = "mwan3" ];then
             cp ylx_files/x2/x2.mwan3.config .config
             cp ylx_files/x2/manage1.mwan3.asp ylx_files/x2/files/www/manage1.asp
+         elif [ "$2" = "trojan" ];then
+            cp ylx_files/x2/x2.trojan.config .config
+            cp ylx_files/x2/manage1.bond.asp ylx_files/x2/files/www/manage1.asp
          elif [ "$2" = "bond_mwan3" ];then
             cp ylx_files/x2/x2.bond_mwan3.config .config
             cp ylx_files/x2/manage1.bond.asp ylx_files/x2/files/www/manage1.asp
@@ -123,6 +126,8 @@ case $1 in
             cp bin/targets/ath79/generic/x2-21.02-v1.0-ath79-generic-ylx_x2-squashfs-sysupgrade.bin firm/$btime-x2.bond.bin
          elif [ "$2" = "mwan3" ];then
             cp bin/targets/ath79/generic/x2-21.02-v1.0-ath79-generic-ylx_x2-squashfs-sysupgrade.bin firm/$btime-x2.mwan3.bin
+         elif [ "$2" = "trojan" ];then
+            cp bin/targets/ath79/generic/x2-21.02-v1.0-ath79-generic-ylx_x2-squashfs-sysupgrade.bin firm/$btime-x2.trojan.bin
          elif [ "$2" = "bond_mwan3" ];then
             cp bin/targets/ath79/generic/x2-21.02-v1.0-ath79-generic-ylx_x2-squashfs-sysupgrade.bin firm/$btime-x2.bond_mwan3.bin
          else

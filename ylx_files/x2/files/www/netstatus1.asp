@@ -25,7 +25,7 @@ $.ajax({
        processData:false,
        contentType:false,
        success: function(json) {
-         $("#used_byte").html("0");
+         //$("#used_byte").html("0");
          }
        });
 }
