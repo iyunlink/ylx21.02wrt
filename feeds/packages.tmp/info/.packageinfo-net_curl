@@ -2,7 +2,7 @@ Source-Makefile: feeds/packages/net/curl/Makefile
 
 Package: curl
 Submenu: File Transfer
-Version: 7.80.0-0
+Version: 7.83.1-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libcurl
 Conflicts: 
 Menu-Depends: 
@@ -12,7 +12,7 @@ Category: Network
 Repository: base
 Title: A client-side URL transfer utility
 Maintainer: Stan Grishin <stangri@melmac.ca>
-Source: curl-7.80.0.tar.xz
+Source: curl-7.83.1.tar.xz
 License: MIT
 LicenseFiles: COPYING
 Type: ipkg
@@ -23,7 +23,7 @@ Stan Grishin <stangri@melmac.ca>
 
 Package: libcurl
 Menu: 1
-Version: 7.80.0-0
+Version: 7.83.1-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +LIBCURL_WOLFSSL:libwolfssl +LIBCURL_OPENSSL:libopenssl +LIBCURL_GNUTLS:libgnutls +LIBCURL_MBEDTLS:libmbedtls +LIBCURL_ZLIB:zlib +LIBCURL_ZSTD:libzstd +LIBCURL_THREADED_RESOLVER:libpthread +LIBCURL_LDAP:libopenldap +LIBCURL_LIBIDN2:libidn2 +LIBCURL_SSH2:libssh2 +LIBCURL_NGHTTP2:libnghttp2 +ca-bundle
 Conflicts: 
 Menu-Depends: 
@@ -33,7 +33,7 @@ Category: Libraries
 Repository: base
 Title: A client-side URL transfer library
 Maintainer: Stan Grishin <stangri@melmac.ca>
-Source: curl-7.80.0.tar.xz
+Source: curl-7.83.1.tar.xz
 License: MIT
 LicenseFiles: COPYING
 Type: ipkg

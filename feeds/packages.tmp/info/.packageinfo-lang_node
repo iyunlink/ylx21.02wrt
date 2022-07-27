@@ -5,7 +5,7 @@ Build-Types: host
 
 Package: node
 Submenu: Node.js
-Version: v14.18.3-1
+Version: v14.20.0-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @HAS_FPU @(i386||x86_64||arm||aarch64||mipsel) +libstdcpp +libopenssl +zlib +libnghttp2 +libuv +libcares +libatomic +NODEJS_ICU_SYSTEM:icu +NODEJS_ICU_SYSTEM:icu-full-data
 Conflicts: 
 Menu-Depends: 
@@ -15,7 +15,7 @@ Category: Languages
 Repository: base
 Title: Node.js is a platform built on Chrome's JavaScript runtime
 Maintainer: Hirokazu MORIKAWA <morikw2@gmail.com>, Adrian Panella <ianchi74@outlook.com>
-Source: node-v14.18.3.tar.xz
+Source: node-v14.20.0.tar.xz
 License: MIT
 LicenseFiles: LICENSE
 Type: ipkg
@@ -53,7 +53,7 @@ Config:
 
 Package: node-npm
 Submenu: Node.js
-Version: v14.18.3-1
+Version: v14.20.0-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +node
 Conflicts: 
 Menu-Depends: 
@@ -63,7 +63,7 @@ Category: Languages
 Repository: base
 Title: NPM stands for Node Package Manager
 Maintainer: Hirokazu MORIKAWA <morikw2@gmail.com>, Adrian Panella <ianchi74@outlook.com>
-Source: node-v14.18.3.tar.xz
+Source: node-v14.20.0.tar.xz
 License: MIT
 LicenseFiles: LICENSE
 Type: ipkg

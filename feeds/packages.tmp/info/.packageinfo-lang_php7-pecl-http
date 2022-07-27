@@ -3,7 +3,7 @@ Build-Depends: php7 php7-pecl-propro php7-pecl-raphf !BUILD_NLS:libiconv !BUILD_
 
 Package: php7-pecl-http
 Submenu: PHP7
-Version: 3.2.4-1
+Version: 3.2.5-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread php7 +icu +libcurl +librt +libevent2 +PACKAGE_libidn:libidn +libidn2 +php7-mod-iconv +php7-mod-session +php7-pecl-raphf +php7-pecl-propro
 Conflicts: 
 Menu-Depends: 
@@ -13,7 +13,7 @@ Category: Languages
 Repository: base
 Title: Extended HTTP Support
 Maintainer: Michael Heimpold <mhei@heimpold.de>
-Source: pecl_http-3.2.4.tgz
+Source: pecl_http-3.2.5.tgz
 License: BSD-2-Clause
 LicenseFiles: LICENSE
 Type: ipkg

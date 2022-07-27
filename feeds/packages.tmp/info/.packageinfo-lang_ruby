@@ -3,7 +3,7 @@ Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:gettext
 Build-Types: host
 
 Package: libruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +librt +libgmp +zlib
 Conflicts: 
 Menu-Depends: 
@@ -13,7 +13,7 @@ Category: Libraries
 Repository: base
 Title: Ruby scripting language (shared library)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -24,7 +24,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libruby
 Conflicts: 
 Menu-Depends: 
@@ -34,7 +34,7 @@ Category: Languages
 Repository: base
 Title: Ruby scripting language (interpreter)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -59,7 +59,7 @@ Config:
 
 Package: ruby-dev
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libruby ruby
 Conflicts: 
 Menu-Depends: 
@@ -69,7 +69,7 @@ Category: Languages
 Repository: base
 Title: Ruby scripting language (dev files)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -80,7 +80,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-abbrev
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -90,7 +90,7 @@ Category: Languages
 Repository: base
 Title: Ruby Calculates the set of unambiguous abbreviations for a given set of strings
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -108,7 +108,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-base64
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -118,7 +118,7 @@ Category: Languages
 Repository: base
 Title: Ruby Encode and decode base64
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -136,7 +136,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-benchmark
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -146,7 +146,7 @@ Category: Languages
 Repository: base
 Title: Ruby Performance benchmarking library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -165,7 +165,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-bigdecimal
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -175,7 +175,7 @@ Category: Languages
 Repository: base
 Title: Ruby Arbitrary-precision decimal floating-point library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -194,7 +194,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-bundler
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-erb +ruby-irb +ruby-open-uri +ruby-readline
 Conflicts: 
 Menu-Depends: 
@@ -204,7 +204,7 @@ Category: Languages
 Repository: base
 Title: Ruby Manage dependencies
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -216,7 +216,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-cgi
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-pstore +ruby-securerandom +ruby-shellwords +ruby-tempfile
 Conflicts: 
 Menu-Depends: 
@@ -226,7 +226,7 @@ Category: Languages
 Repository: base
 Title: Ruby CGI support toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -246,7 +246,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-continuation
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -256,7 +256,7 @@ Category: Languages
 Repository: base
 Title: Ruby Similar to C setjmp/longjmp with extra states
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -272,7 +272,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-coverage
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -282,7 +282,7 @@ Category: Languages
 Repository: base
 Title: Ruby Coverage measurement
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -299,7 +299,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-csv
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-date +ruby-english +ruby-forwardable +ruby-stringio +ruby-strscan
 Conflicts: 
 Menu-Depends: 
@@ -309,7 +309,7 @@ Category: Languages
 Repository: base
 Title: Ruby CSV Reading and Writing
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -327,7 +327,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-date
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -337,7 +337,7 @@ Category: Languages
 Repository: base
 Title: Ruby Comparable module for handling dates
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -355,7 +355,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-dbm
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libdb47
 Conflicts: 
 Menu-Depends: 
@@ -365,7 +365,7 @@ Category: Languages
 Repository: base
 Title: Ruby Wrapper for the UNIX-style Database Manager Library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -383,7 +383,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-debug
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-continuation +ruby-pp +ruby-readline +ruby-tracer
 Conflicts: 
 Menu-Depends: 
@@ -393,7 +393,7 @@ Category: Languages
 Repository: base
 Title: Ruby generic command line interface for ruby-debug
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -410,7 +410,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-delegate
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -420,7 +420,7 @@ Category: Languages
 Repository: base
 Title: Ruby lib to delegate method calls to an object
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -439,7 +439,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-did-you-mean
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -449,7 +449,7 @@ Category: Languages
 Repository: base
 Title: Ruby did you mean? experience
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -468,7 +468,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-digest
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +RUBY_DIGEST_USE_OPENSSL:libopenssl
 Conflicts: 
 Menu-Depends: 
@@ -478,7 +478,7 @@ Category: Languages
 Repository: base
 Title: Ruby Digest Library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -512,7 +512,7 @@ Config:
 
 Package: ruby-drb
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-ipaddr +ruby-monitor +ruby-observer +ruby-singleton +ruby-tmpdir
 Conflicts: 
 Menu-Depends: 
@@ -522,7 +522,7 @@ Category: Languages
 Repository: base
 Title: Ruby distributed object system
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -540,7 +540,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-enc
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -550,7 +550,7 @@ Category: Languages
 Repository: base
 Title: Ruby character re-coding library charset (small subset)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -569,7 +569,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-enc-extra
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -579,7 +579,7 @@ Category: Languages
 Repository: base
 Title: Ruby character re-coding library charset (extra subset)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -602,7 +602,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-english
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -612,7 +612,7 @@ Category: Languages
 Repository: base
 Title: Ruby Reference some global vars as english variables
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -629,7 +629,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-erb
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-gems
 Conflicts: 
 Menu-Depends: 
@@ -639,7 +639,7 @@ Category: Languages
 Repository: base
 Title: Ruby (embedded interpreter)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -651,7 +651,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-etc
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -661,7 +661,7 @@ Category: Languages
 Repository: base
 Title: Ruby Access info typically stored in /etc
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -678,7 +678,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-expect
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -688,7 +688,7 @@ Category: Languages
 Repository: base
 Title: Ruby Expect-like for IO
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -704,7 +704,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-fcntl
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -714,7 +714,7 @@ Category: Languages
 Repository: base
 Title: Ruby Loads constants defined in the OS fcntl.h C header file
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -731,7 +731,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-fiber
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -741,7 +741,7 @@ Category: Languages
 Repository: base
 Title: Ruby Light weight cooperative concurrency
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -757,7 +757,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-fiddle
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libffi
 Conflicts: 
 Menu-Depends: 
@@ -767,7 +767,7 @@ Category: Languages
 Repository: base
 Title: Ruby Libffi wrapper for Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -786,7 +786,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-fileutils
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +ruby-etc +ruby-rbconfig +ruby-socket
 Conflicts: 
 Menu-Depends: 
@@ -796,7 +796,7 @@ Category: Languages
 Repository: base
 Title: Ruby File utility methods for copying moving removing etc
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -814,7 +814,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-find
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -824,7 +824,7 @@ Category: Languages
 Repository: base
 Title: Ruby top-down traversal of a set of file paths
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -841,7 +841,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-forwardable
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -851,7 +851,7 @@ Category: Languages
 Repository: base
 Title: Ruby delegation of methods to a object
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -869,7 +869,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-gdbm
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libgdbm
 Conflicts: 
 Menu-Depends: 
@@ -879,7 +879,7 @@ Category: Languages
 Repository: base
 Title: Ruby Ruby extension for GNU dbm
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -896,7 +896,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-gems
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-base64 +ruby-cgi +ruby-json +ruby-net-http +ruby-open3 +ruby-pathname +ruby-pp +ruby-rake +ruby-resolv +ruby-yaml
 Conflicts: 
 Menu-Depends: 
@@ -906,7 +906,7 @@ Category: Languages
 Repository: base
 Title: Ruby gems packet management
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -918,7 +918,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-getoptlong
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -928,7 +928,7 @@ Category: Languages
 Repository: base
 Title: Ruby implementation of getoptLong
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -947,7 +947,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-io-console
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -957,7 +957,7 @@ Category: Languages
 Repository: base
 Title: Ruby Console interface
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -975,7 +975,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-io-nonblock
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -985,7 +985,7 @@ Category: Languages
 Repository: base
 Title: Ruby Non-blocking mode with IO class
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1002,7 +1002,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-io-wait
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1012,7 +1012,7 @@ Category: Languages
 Repository: base
 Title: Ruby Waits until IO is readable or writable without blocking
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1029,7 +1029,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-ipaddr
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-socket
 Conflicts: 
 Menu-Depends: 
@@ -1039,7 +1039,7 @@ Category: Languages
 Repository: base
 Title: Ruby Set of methods to manipulate an IP address
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1056,7 +1056,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-irb
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-gems +ruby-reline +ruby-ripper +ruby-tracer
 Conflicts: 
 Menu-Depends: 
@@ -1066,7 +1066,7 @@ Category: Languages
 Repository: base
 Title: Ruby (interactive shell)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1078,7 +1078,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-json
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-date +ruby-ostruct
 Conflicts: 
 Menu-Depends: 
@@ -1088,7 +1088,7 @@ Category: Languages
 Repository: base
 Title: Ruby JSON Implementation for Ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1114,7 +1114,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-logger
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-monitor
 Conflicts: 
 Menu-Depends: 
@@ -1124,7 +1124,7 @@ Category: Languages
 Repository: base
 Title: Ruby logger and syslog library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1142,7 +1142,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-matrix
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1152,7 +1152,7 @@ Category: Languages
 Repository: base
 Title: Ruby implementation of Matrix and Vector classes
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1170,7 +1170,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-minitest
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-gems +ruby-mutex_m
 Conflicts: 
 Menu-Depends: 
@@ -1180,7 +1180,7 @@ Category: Languages
 Repository: base
 Title: Ruby Gem minitest
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1203,7 +1203,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-mkmf
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-shellwords +ruby-tmpdir
 Conflicts: 
 Menu-Depends: 
@@ -1213,7 +1213,7 @@ Category: Languages
 Repository: base
 Title: Ruby makefile library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1229,7 +1229,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-monitor
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1239,7 +1239,7 @@ Category: Languages
 Repository: base
 Title: Ruby Object or module methods are executed with mutual exclusion
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1256,7 +1256,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-mutex_m
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1266,7 +1266,7 @@ Category: Languages
 Repository: base
 Title: Ruby extend objects to be handled like a Mutex
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1283,7 +1283,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-net-ftp
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-monitor +ruby-net-protocol +ruby-openssl +ruby-time
 Conflicts: 
 Menu-Depends: 
@@ -1293,7 +1293,7 @@ Category: Languages
 Repository: base
 Title: Ruby FTP lib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1310,7 +1310,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-net-http
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net-protocol +ruby-securerandom +ruby-tempfile +ruby-uri +ruby-zlib
 Conflicts: 
 Menu-Depends: 
@@ -1320,7 +1320,7 @@ Category: Languages
 Repository: base
 Title: Ruby HTTP lib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1340,7 +1340,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-net-imap
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-monitor +ruby-net-protocol +ruby-openssl +ruby-strscan
 Conflicts: 
 Menu-Depends: 
@@ -1350,7 +1350,7 @@ Category: Languages
 Repository: base
 Title: Ruby IMAP lib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1367,7 +1367,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-net-pop
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net-protocol +ruby-openssl
 Conflicts: 
 Menu-Depends: 
@@ -1377,7 +1377,7 @@ Category: Languages
 Repository: base
 Title: Ruby POP3 lib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1396,7 +1396,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-net-protocol
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-socket +ruby-timeout
 Conflicts: 
 Menu-Depends: 
@@ -1406,7 +1406,7 @@ Category: Languages
 Repository: base
 Title: Ruby Abstract for net-* clients
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1423,7 +1423,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-net-smtp
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net-protocol +ruby-openssl
 Conflicts: 
 Menu-Depends: 
@@ -1433,7 +1433,7 @@ Category: Languages
 Repository: base
 Title: Ruby SMTP lib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1452,7 +1452,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-nkf
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -1462,7 +1462,7 @@ Category: Languages
 Repository: base
 Title: Ruby Network Kanji Filter
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1480,7 +1480,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-objspace
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-tempfile
 Conflicts: 
 Menu-Depends: 
@@ -1490,7 +1490,7 @@ Category: Languages
 Repository: base
 Title: Ruby Routines to interact with the garbage collection facility
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1507,7 +1507,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-observer
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1517,7 +1517,7 @@ Category: Languages
 Repository: base
 Title: Ruby Observer design pattern
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1536,7 +1536,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-open-uri
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net-ftp +ruby-net-http
 Conflicts: 
 Menu-Depends: 
@@ -1546,7 +1546,7 @@ Category: Languages
 Repository: base
 Title: Ruby Wrapper for Net::HTTP Net::HTTPS and Net::
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1563,7 +1563,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-open3
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1573,7 +1573,7 @@ Category: Languages
 Repository: base
 Title: Ruby popen with stderr
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1592,7 +1592,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-openssl
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-digest +ruby-enc +ruby-io-nonblock +ruby-ipaddr +ruby-stringio +libopenssl
 Conflicts: 
 Menu-Depends: 
@@ -1602,7 +1602,7 @@ Category: Languages
 Repository: base
 Title: Ruby SSL TLS and general purpose cryptography
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1621,7 +1621,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-optparse
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-shellwords +ruby-time
 Conflicts: 
 Menu-Depends: 
@@ -1631,7 +1631,7 @@ Category: Languages
 Repository: base
 Title: Ruby command-line option analysis
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1650,7 +1650,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-ostruct
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1660,7 +1660,7 @@ Category: Languages
 Repository: base
 Title: Ruby build custom data structures
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1678,7 +1678,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-pathname
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-fileutils +ruby-find
 Conflicts: 
 Menu-Depends: 
@@ -1688,7 +1688,7 @@ Category: Languages
 Repository: base
 Title: Ruby Pathname lib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1706,7 +1706,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-powerassert
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-pp +ruby-ripper
 Conflicts: 
 Menu-Depends: 
@@ -1716,7 +1716,7 @@ Category: Languages
 Repository: base
 Title: Ruby Gem power_assert
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1738,7 +1738,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-pp
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-etc +ruby-prettyprint
 Conflicts: 
 Menu-Depends: 
@@ -1748,7 +1748,7 @@ Category: Languages
 Repository: base
 Title: Ruby Pretty print objects
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1765,7 +1765,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-prettyprint
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1775,7 +1775,7 @@ Category: Languages
 Repository: base
 Title: Ruby PrettyPrint library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1792,7 +1792,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-prime
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-forwardable +ruby-singleton
 Conflicts: 
 Menu-Depends: 
@@ -1802,7 +1802,7 @@ Category: Languages
 Repository: base
 Title: Ruby Prime numbers and factorization library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1819,7 +1819,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-pstore
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-digest +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -1829,7 +1829,7 @@ Category: Languages
 Repository: base
 Title: Ruby file based persistence
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1848,7 +1848,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-psych
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-bigdecimal +ruby-date +ruby-enc +ruby-forwardable +ruby-stringio +ruby-strscan +libyaml
 Conflicts: 
 Menu-Depends: 
@@ -1858,7 +1858,7 @@ Category: Languages
 Repository: base
 Title: Ruby YAML parser and emitter
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1877,7 +1877,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-pty
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1887,7 +1887,7 @@ Category: Languages
 Repository: base
 Title: Ruby Creates and manages pseudo terminals
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1903,7 +1903,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-racc
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-forwardable +ruby-optparse +ruby-rbconfig +ruby-stringio
 Conflicts: 
 Menu-Depends: 
@@ -1913,7 +1913,7 @@ Category: Languages
 Repository: base
 Title: Ruby LALR parser generator
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1925,7 +1925,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rake
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-fileutils +ruby-monitor +ruby-optparse +ruby-ostruct +ruby-set +ruby-singleton
 Conflicts: 
 Menu-Depends: 
@@ -1935,7 +1935,7 @@ Category: Languages
 Repository: base
 Title: Ruby Rake (make replacement)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1947,7 +1947,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rbconfig
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -1957,7 +1957,7 @@ Category: Languages
 Repository: base
 Title: Ruby RbConfig
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1974,7 +1974,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rbs
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-gems +ruby-logger +ruby-racc +ruby-ripper
 Conflicts: 
 Menu-Depends: 
@@ -1984,7 +1984,7 @@ Category: Languages
 Repository: base
 Title: Ruby RBS provides syntax and semantics definition for the Ruby Signature language
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -1996,7 +1996,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rdoc
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-abbrev +ruby-did-you-mean +ruby-erb +ruby-racc +ruby-ripper
 Conflicts: 
 Menu-Depends: 
@@ -2006,7 +2006,7 @@ Category: Languages
 Repository: base
 Title: Ruby RDoc produces HTML and command-line documentation for Ruby projects
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2018,7 +2018,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-readline-ext
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libncurses +libreadline
 Conflicts: 
 Menu-Depends: 
@@ -2028,7 +2028,7 @@ Category: Languages
 Repository: base
 Title: Ruby support for native GNU readline
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2046,7 +2046,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-readline
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-reline
 Conflicts: 
 Menu-Depends: 
@@ -2056,7 +2056,7 @@ Category: Languages
 Repository: base
 Title: Ruby loads readline-ext(native) or reline(ruby)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2074,7 +2074,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-reline
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-fiddle +ruby-forwardable +ruby-io-console +ruby-tempfile +ruby-timeout
 Conflicts: 
 Menu-Depends: 
@@ -2084,7 +2084,7 @@ Category: Languages
 Repository: base
 Title: Ruby alternative to readline-ext in pure ruby
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2103,7 +2103,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-resolv
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-securerandom +ruby-timeout
 Conflicts: 
 Menu-Depends: 
@@ -2113,7 +2113,7 @@ Category: Languages
 Repository: base
 Title: Ruby DNS resolver library
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2134,7 +2134,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-resolv-replace
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-resolv
 Conflicts: 
 Menu-Depends: 
@@ -2144,7 +2144,7 @@ Category: Languages
 Repository: base
 Title: Ruby Replace Socket DNS with Resolv
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2161,7 +2161,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rexml
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +ruby-forwardable +ruby-pp +ruby-set +ruby-stringio +ruby-strscan
 Conflicts: 
 Menu-Depends: 
@@ -2171,7 +2171,7 @@ Category: Languages
 Repository: base
 Title: Ruby XML toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2197,7 +2197,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rinda
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-drb +ruby-forwardable
 Conflicts: 
 Menu-Depends: 
@@ -2207,7 +2207,7 @@ Category: Languages
 Repository: base
 Title: Ruby Linda paradigm implementation
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2224,7 +2224,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-ripper
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2234,7 +2234,7 @@ Category: Languages
 Repository: base
 Title: Ruby script parser
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2252,7 +2252,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-rss
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-english +ruby-nkf +ruby-open-uri +ruby-rexml
 Conflicts: 
 Menu-Depends: 
@@ -2262,7 +2262,7 @@ Category: Languages
 Repository: base
 Title: Ruby RSS toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2289,7 +2289,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-securerandom
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-openssl
 Conflicts: 
 Menu-Depends: 
@@ -2299,7 +2299,7 @@ Category: Languages
 Repository: base
 Title: Ruby Secure random number generators
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2316,7 +2316,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-set
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-tsort
 Conflicts: 
 Menu-Depends: 
@@ -2326,7 +2326,7 @@ Category: Languages
 Repository: base
 Title: Ruby Set collection
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2344,7 +2344,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-shellwords
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2354,7 +2354,7 @@ Category: Languages
 Repository: base
 Title: Ruby Manipulate strings as Bourne Shell
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2371,7 +2371,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-singleton
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2381,7 +2381,7 @@ Category: Languages
 Repository: base
 Title: Ruby Singleton pattern
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2400,7 +2400,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-socket
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-io-wait
 Conflicts: 
 Menu-Depends: 
@@ -2410,7 +2410,7 @@ Category: Languages
 Repository: base
 Title: Ruby socket support
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2427,7 +2427,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-stringio
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2437,7 +2437,7 @@ Category: Languages
 Repository: base
 Title: Ruby Pseudo `IO` class from/to `String`
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2454,7 +2454,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-strscan
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2464,7 +2464,7 @@ Category: Languages
 Repository: base
 Title: Ruby Lexical scanning operations on a String
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2481,7 +2481,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-syslog
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-logger
 Conflicts: 
 Menu-Depends: 
@@ -2491,7 +2491,7 @@ Category: Languages
 Repository: base
 Title: Ruby Syslog Lib
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2509,7 +2509,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-tempfile
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-delegate +ruby-tmpdir
 Conflicts: 
 Menu-Depends: 
@@ -2519,7 +2519,7 @@ Category: Languages
 Repository: base
 Title: Ruby Manages temporary files
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2536,7 +2536,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-testunit
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-csv +ruby-erb +ruby-powerassert +ruby-rexml
 Conflicts: 
 Menu-Depends: 
@@ -2546,7 +2546,7 @@ Category: Languages
 Repository: base
 Title: Ruby Gem test-unit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2570,7 +2570,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-time
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-date
 Conflicts: 
 Menu-Depends: 
@@ -2580,7 +2580,7 @@ Category: Languages
 Repository: base
 Title: Ruby Extends Time with additional methods for parsing and converting Times
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2597,7 +2597,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-timeout
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2607,7 +2607,7 @@ Category: Languages
 Repository: base
 Title: Ruby Auto-terminate potentially long-running operations
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2626,7 +2626,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-tmpdir
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-fileutils
 Conflicts: 
 Menu-Depends: 
@@ -2636,7 +2636,7 @@ Category: Languages
 Repository: base
 Title: Ruby Get temp dir path
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2653,7 +2653,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-tracer
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2663,7 +2663,7 @@ Category: Languages
 Repository: base
 Title: Ruby Outputs a source level execution trace of a Ruby program
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2681,7 +2681,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-tsort
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2691,7 +2691,7 @@ Category: Languages
 Repository: base
 Title: Ruby Topological sorting using Tarjan s algorithm
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2708,7 +2708,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-typeprof
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-coverage +ruby-rbs
 Conflicts: 
 Menu-Depends: 
@@ -2718,7 +2718,7 @@ Category: Languages
 Repository: base
 Title: Ruby A type analysis tool for Ruby code based on abstract interpretation
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2730,7 +2730,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-unicodenormalize
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +ruby-enc-extra
 Conflicts: 
 Menu-Depends: 
@@ -2740,7 +2740,7 @@ Category: Languages
 Repository: base
 Title: Ruby String additions for Unicode normalization
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2756,7 +2756,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-un
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-mkmf +ruby-optparse
 Conflicts: 
 Menu-Depends: 
@@ -2766,7 +2766,7 @@ Category: Languages
 Repository: base
 Title: Ruby Utilities to replace common UNIX commands in Makefiles
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2783,7 +2783,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-uri
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
 Conflicts: 
 Menu-Depends: 
@@ -2793,7 +2793,7 @@ Category: Languages
 Repository: base
 Title: Ruby library to handle URI
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2812,7 +2812,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-weakref
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-delegate
 Conflicts: 
 Menu-Depends: 
@@ -2822,7 +2822,7 @@ Category: Languages
 Repository: base
 Title: Ruby Weak reference to be garbage collected
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2839,7 +2839,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-yaml
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-dbm +ruby-pstore +ruby-psych
 Conflicts: 
 Menu-Depends: 
@@ -2849,7 +2849,7 @@ Category: Languages
 Repository: base
 Title: Ruby YAML toolkit
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2868,7 +2868,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-zlib
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
 Conflicts: 
 Menu-Depends: 
@@ -2878,7 +2878,7 @@ Category: Languages
 Repository: base
 Title: Ruby compression/decompression library interface
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg
@@ -2895,7 +2895,7 @@ Luiz Angelo Daros de Luca <luizluca@gmail.com>
 
 Package: ruby-stdlib
 Submenu: Ruby
-Version: 3.0.3-1
+Version: 3.0.4-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-abbrev +ruby-base64 +ruby-benchmark +ruby-bigdecimal +ruby-bundler +ruby-cgi +ruby-continuation +ruby-coverage +ruby-csv +ruby-date +ruby-dbm +ruby-debug +ruby-delegate +ruby-did-you-mean +ruby-digest +ruby-drb +ruby-enc +ruby-enc-extra +ruby-english +ruby-erb +ruby-etc +ruby-expect +ruby-fcntl +ruby-fiber +ruby-fiddle +ruby-fileutils +ruby-find +ruby-forwardable +ruby-gdbm +ruby-gems +ruby-getoptlong +ruby-io-console +ruby-io-nonblock +ruby-io-wait +ruby-ipaddr +ruby-irb +ruby-json +ruby-logger +ruby-matrix +ruby-minitest +ruby-mkmf +ruby-monitor +ruby-mutex_m +ruby-net-ftp +ruby-net-http +ruby-net-imap +ruby-net-pop +ruby-net-protocol +ruby-net-smtp +ruby-nkf +ruby-objspace +ruby-observer +ruby-open-uri +ruby-open3 +ruby-openssl +ruby-optparse +ruby-ostruct +ruby-pathname +ruby-powerassert +ruby-pp +ruby-prettyprint +ruby-prime +ruby-pstore +ruby-psych +ruby-pty +ruby-racc +ruby-rake +ruby-rbconfig +ruby-rbs +ruby-rdoc +ruby-readline-ext +ruby-readline +ruby-reline +ruby-resolv +ruby-resolv-replace +ruby-rexml +ruby-rinda +ruby-ripper +ruby-rss +ruby-securerandom +ruby-set +ruby-shellwords +ruby-singleton +ruby-socket +ruby-stringio +ruby-strscan +ruby-syslog +ruby-tempfile +ruby-testunit +ruby-time +ruby-timeout +ruby-tmpdir +ruby-tracer +ruby-tsort +ruby-typeprof +ruby-unicodenormalize +ruby-un +ruby-uri +ruby-weakref +ruby-yaml +ruby-zlib
 Conflicts: 
 Menu-Depends: 
@@ -2905,7 +2905,7 @@ Category: Languages
 Repository: base
 Title: Ruby standard libraries (metadata for all stdlib subsets)
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
-Source: ruby-3.0.3.tar.xz
+Source: ruby-3.0.4.tar.xz
 License: BSD-2-Clause
 LicenseFiles: COPYING
 Type: ipkg

@@ -34,7 +34,7 @@ Config:
 Package: kmod-ipt-coova
 Submenu: Netfilter Extensions
 Version: <LINUX_VERSION>+1.5-4
-Depends: coova-chilli +kmod-ipt-core +libxtables
+Depends: +kmod-ipt-core +libxtables
 Conflicts: 
 Menu-Depends: 
 Provides: 
@@ -47,8 +47,6 @@ License: GPL-2.0-or-later
 LicenseFiles: COPYING
 Type: ipkg
 Description: 	Netfilter kernel module for CoovaChilli
-	Includes:
-	- coova
 http://www.coova.org/CoovaChilli
 Jaehoon You <teslamint@gmail.com>
 @@

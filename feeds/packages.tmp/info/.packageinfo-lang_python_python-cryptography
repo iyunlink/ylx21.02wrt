@@ -3,7 +3,7 @@ Build-Depends: libffi/host
 
 Package: python3-cryptography
 Submenu: Python
-Version: 3.4.8-1
+Version: 3.4.8-2
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +python3-light +python3-email +python3-openssl +python3-urllib +python3-cffi +python3-six
 Conflicts: 
 Menu-Depends: 
@@ -26,7 +26,7 @@ Jeffery To <jeffery.to@gmail.com>
 
 Package: python3-cryptography-src
 Submenu: Python
-Version: 3.4.8-1
+Version: 3.4.8-2
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
 Conflicts: 
 Menu-Depends: 

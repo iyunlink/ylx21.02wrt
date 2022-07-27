@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/tor/Makefile
 
 Package: tor
-Version: 0.4.5.10-1
+Version: 0.4.7.7-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libevent2 +libopenssl +libpthread +librt +zlib +libcap
 Conflicts: tor-basic
 Menu-Depends: 
@@ -13,7 +13,7 @@ Repository: base
 Title: Tor routing daemon (full)
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 Require-User: tor=52:tor=52
-Source: tor-0.4.5.10.tar.gz
+Source: tor-0.4.7.7.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description: Tor is a toolset for a wide range of organizations and people that want to
@@ -29,7 +29,7 @@ Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 @@
 
 Package: tor-basic
-Version: 0.4.5.10-1
+Version: 0.4.7.7-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libevent2 +libopenssl +libpthread +librt +zlib +libcap
 Conflicts: 
 Menu-Depends: 
@@ -41,7 +41,7 @@ Repository: base
 Title: Tor routing daemon (no bridge/relay support)
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 Require-User: tor=52:tor=52
-Source: tor-0.4.5.10.tar.gz
+Source: tor-0.4.7.7.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description: Tor is a toolset for a wide range of organizations and people that want to
@@ -57,7 +57,7 @@ Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 @@
 
 Package: tor-gencert
-Version: 0.4.5.10-1
+Version: 0.4.7.7-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread tor
 Conflicts: 
 Menu-Depends: 
@@ -68,7 +68,7 @@ Repository: base
 Title: Tor certificate generation
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 Require-User: tor=52:tor=52
-Source: tor-0.4.5.10.tar.gz
+Source: tor-0.4.7.7.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description: Tor is a toolset for a wide range of organizations and people that want to
@@ -84,7 +84,7 @@ Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 @@
 
 Package: tor-resolve
-Version: 0.4.5.10-1
+Version: 0.4.7.7-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread tor-basic
 Conflicts: 
 Menu-Depends: 
@@ -95,7 +95,7 @@ Repository: base
 Title: tor hostname resolve
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 Require-User: tor=52:tor=52
-Source: tor-0.4.5.10.tar.gz
+Source: tor-0.4.7.7.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description: Tor is a toolset for a wide range of organizations and people that want to
@@ -111,7 +111,7 @@ Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 @@
 
 Package: tor-geoip
-Version: 0.4.5.10-1
+Version: 0.4.7.7-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread tor-basic
 Conflicts: 
 Menu-Depends: 
@@ -122,7 +122,7 @@ Repository: base
 Title: GeoIP db for tor
 Maintainer: Hauke Mehrtens <hauke@hauke-m.de> Peter Wagner <tripolar@gmx.at>
 Require-User: tor=52:tor=52
-Source: tor-0.4.5.10.tar.gz
+Source: tor-0.4.7.7.tar.gz
 LicenseFiles: LICENSE
 Type: ipkg
 Description: Tor is a toolset for a wide range of organizations and people that want to

@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/utils/cache-domains/Makefile
 
 Package: cache-domains-openssl
-Version: 2.3.0-1
+Version: 2.3.1-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +jq +bash +dnsmasq +ca-bundle +libustream-openssl
 Conflicts: 
 Menu-Depends: 
@@ -21,7 +21,7 @@ Gerard Ryan <G.M0N3Y.2503@gmail.com>
 @@
 
 Package: cache-domains-mbedtls
-Version: 2.3.0-1
+Version: 2.3.1-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +jq +bash +dnsmasq +ca-bundle +libustream-mbedtls
 Conflicts: 
 Menu-Depends: 
@@ -41,7 +41,7 @@ Gerard Ryan <G.M0N3Y.2503@gmail.com>
 @@
 
 Package: cache-domains-wolfssl
-Version: 2.3.0-1
+Version: 2.3.1-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +jq +bash +dnsmasq +ca-bundle +libustream-wolfssl
 Conflicts: 
 Menu-Depends: 

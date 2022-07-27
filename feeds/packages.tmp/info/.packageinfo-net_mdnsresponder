@@ -3,7 +3,7 @@ Build-Depends: libcap
 
 Package: mdns-utils
 Submenu: IP Addresses and Names
-Version: IETF104-4
+Version: IETF104-5
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +mdnsd
 Conflicts: 
 Menu-Depends: 
@@ -33,7 +33,7 @@ http://developer.apple.com/networking/bonjour/
 
 Package: mdnsd
 Submenu: IP Addresses and Names
-Version: IETF104-4
+Version: IETF104-5
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
 Conflicts: 
 Menu-Depends: 
@@ -57,7 +57,7 @@ http://developer.apple.com/networking/bonjour/
 
 Package: mdnsresponder
 Submenu: IP Addresses and Names
-Version: IETF104-4
+Version: IETF104-5
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +mdns-utils +mdnsd
 Conflicts: 
 Menu-Depends: 

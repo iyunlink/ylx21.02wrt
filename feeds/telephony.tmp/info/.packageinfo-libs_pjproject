@@ -2,7 +2,7 @@ Source-Makefile: feeds/telephony/libs/pjproject/Makefile
 
 Package: libpj
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +librt
 Conflicts: 
 Menu-Depends: 
@@ -23,7 +23,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjlib-util
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +librt
 Conflicts: 
 Menu-Depends: 
@@ -44,7 +44,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjmedia
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +libpjlib-util +libpjnath +librt +libsrtp2
 Conflicts: 
 Menu-Depends: 
@@ -65,7 +65,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjnath
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +libpjlib-util +librt
 Conflicts: 
 Menu-Depends: 
@@ -86,7 +86,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjsip-simple
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +libpjlib-util +libpjsip +librt
 Conflicts: 
 Menu-Depends: 
@@ -107,7 +107,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjsip-ua
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +libpjlib-util +libpjmedia +libpjsip-simple +libpjsip +librt
 Conflicts: 
 Menu-Depends: 
@@ -128,7 +128,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjsip
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +libpjlib-util +librt +libsrtp2
 Conflicts: 
 Menu-Depends: 
@@ -149,7 +149,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjsua
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +libpjlib-util +libpjmedia +libpjnath +libpjsip-simple +libpjsip-ua +libpjsip +librt
 Conflicts: 
 Menu-Depends: 
@@ -170,7 +170,7 @@ Jiri Slachta <jiri@slachta.eu>
 
 Package: libpjsua2
 Submenu: Telephony
-Version: 2.10-5
+Version: 2.10-7
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libopenssl +libuuid +libpthread +libpj +libpjlib-util +libpjmedia +libpjnath +libpjsip-simple +libpjsip-ua +libpjsip +librt +libpjsua
 Conflicts: 
 Menu-Depends: 

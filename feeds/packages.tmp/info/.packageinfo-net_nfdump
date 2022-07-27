@@ -1,7 +1,7 @@
 Source-Makefile: feeds/packages/net/nfdump/Makefile
 
 Package: nfdump
-Version: 1.6.23-0
+Version: 1.6.24-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libbz2 +USE_MUSL:musl-fts
 Conflicts: 
 Menu-Depends: 
@@ -11,7 +11,7 @@ Category: Network
 Repository: base
 Title: nfdump
 Maintainer: W. Michael Petullo <mike@flyn.org>
-Source: nfdump-1.6.23.tar.gz
+Source: nfdump-1.6.24.tar.gz
 License: BSD-3-Clause
 LicenseFiles: COPYING
 Type: ipkg

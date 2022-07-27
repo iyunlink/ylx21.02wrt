@@ -16,6 +16,7 @@ hnetd
 luci-app-bmx6
 luci-app-cjdns
 mcproxy
+mesh11sd
 minimalist-pcproxy
 mrd6
 naywatch

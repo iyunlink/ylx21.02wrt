@@ -3,7 +3,7 @@ Build-Depends: glib2 !BUILD_NLS:libiconv !BUILD_NLS:gettext
 
 Package: ksmbd-server
 Submenu: Filesystem
-Version: 3.4.4-0
+Version: 3.4.2-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full +BUILD_NLS:libintl-full +kmod-fs-ksmbd +libnl-core +libnl-genl
 Conflicts: 
 Menu-Depends: 
@@ -13,7 +13,7 @@ Category: Network
 Repository: base
 Title: Kernel SMB server
 Maintainer: Andy Walsh <andy.walsh44+github@gmail.com>
-Source: ksmbd-tools-3.4.4.tar.gz
+Source: ksmbd-tools-3.4.2.tar.gz
 License: GPL-2.0-or-later
 LicenseFiles: COPYING
 Type: ipkg
@@ -29,7 +29,7 @@ Config:
 
 Package: ksmbd-utils
 Submenu: Filesystem
-Version: 3.4.4-0
+Version: 3.4.2-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +BUILD_NLS:libiconv-full +BUILD_NLS:libintl-full
 Conflicts: 
 Menu-Depends: 
@@ -39,7 +39,7 @@ Category: Network
 Repository: base
 Title: Kernel SMB user management-util
 Maintainer: Andy Walsh <andy.walsh44+github@gmail.com>
-Source: ksmbd-tools-3.4.4.tar.gz
+Source: ksmbd-tools-3.4.2.tar.gz
 License: GPL-2.0-or-later
 LicenseFiles: COPYING
 Type: ipkg
@@ -61,7 +61,7 @@ Config:
 
 Package: ksmbd-avahi-service
 Submenu: Filesystem
-Version: 3.4.4-0
+Version: 3.4.2-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +avahi-daemon
 Conflicts: 
 Menu-Depends: 
@@ -71,7 +71,7 @@ Category: Network
 Repository: base
 Title: Kernel SMB (Avahi service)
 Maintainer: Andy Walsh <andy.walsh44+github@gmail.com>
-Source: ksmbd-tools-3.4.4.tar.gz
+Source: ksmbd-tools-3.4.2.tar.gz
 License: GPL-2.0-or-later
 LicenseFiles: COPYING
 Type: ipkg

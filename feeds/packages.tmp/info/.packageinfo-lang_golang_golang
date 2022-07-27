@@ -4,7 +4,7 @@ Build-Types: host
 
 Package: golang
 Submenu: Go
-Version: 1.17.7-1
+Version: 1.17.12-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(aarch64||arm||i386||i686||mips||mips64||mips64el||mipsel||powerpc64||x86_64) +golang-src
 Conflicts: 
 Menu-Depends: 
@@ -14,7 +14,7 @@ Category: Languages
 Repository: base
 Title: Go programming language (compiler)
 Maintainer: Jeffery To <jeffery.to@gmail.com>
-Source: go1.17.7.src.tar.gz
+Source: go1.17.12.src.tar.gz
 License: BSD-3-Clause
 LicenseFiles: LICENSE
 Type: ipkg
@@ -31,7 +31,7 @@ that feels like a dynamically typed, interpreted language.
 
 This package provides an assembler, compiler, linker, and compiled
 libraries for the Go programming language.
-https://golang.org/
+https://go.dev/
 Jeffery To <jeffery.to@gmail.com>
 @@
 Config:
@@ -40,7 +40,7 @@ Config:
 
 Package: golang-doc
 Submenu: Go
-Version: 1.17.7-1
+Version: 1.17.12-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(aarch64||arm||i386||i686||mips||mips64||mips64el||mipsel||powerpc64||x86_64)
 Conflicts: 
 Menu-Depends: 
@@ -50,7 +50,7 @@ Category: Languages
 Repository: base
 Title: Go programming language (documentation)
 Maintainer: Jeffery To <jeffery.to@gmail.com>
-Source: go1.17.7.src.tar.gz
+Source: go1.17.12.src.tar.gz
 License: BSD-3-Clause
 LicenseFiles: LICENSE
 Type: ipkg
@@ -66,13 +66,13 @@ of run-time reflection. It's a fast, statically typed, compiled language
 that feels like a dynamically typed, interpreted language.
 
 This package provides the documentation for the Go programming language.
-https://golang.org/
+https://go.dev/
 Jeffery To <jeffery.to@gmail.com>
 @@
 
 Package: golang-src
 Submenu: Go
-Version: 1.17.7-1
+Version: 1.17.12-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @(aarch64||arm||i386||i686||mips||mips64||mips64el||mipsel||powerpc64||x86_64)
 Conflicts: 
 Menu-Depends: 
@@ -82,7 +82,7 @@ Category: Languages
 Repository: base
 Title: Go programming language (source files)
 Maintainer: Jeffery To <jeffery.to@gmail.com>
-Source: go1.17.7.src.tar.gz
+Source: go1.17.12.src.tar.gz
 License: BSD-3-Clause
 LicenseFiles: LICENSE
 Type: ipkg
@@ -99,7 +99,7 @@ that feels like a dynamically typed, interpreted language.
 
 This package provides the Go programming language source files needed
 for cross-compilation.
-https://golang.org/
+https://go.dev/
 Jeffery To <jeffery.to@gmail.com>
 @@
 

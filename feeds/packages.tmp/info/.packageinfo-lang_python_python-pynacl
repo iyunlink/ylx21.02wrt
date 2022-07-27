@@ -3,7 +3,7 @@ Build-Depends: libffi/host
 
 Package: python3-pynacl
 Submenu: Python
-Version: 1.4.0-5
+Version: 1.4.0-6
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libsodium +python3-light +python3-cffi +python3-six
 Conflicts: 
 Menu-Depends: 
@@ -24,7 +24,7 @@ Javier Marcet <javier@marcet.info>
 
 Package: python3-pynacl-src
 Submenu: Python
-Version: 1.4.0-5
+Version: 1.4.0-6
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
 Conflicts: 
 Menu-Depends: 

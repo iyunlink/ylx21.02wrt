@@ -90,7 +90,7 @@ Source-Makefile: feeds/routing/babeld/Makefile
 
 Package: babeld
 Submenu: Routing and Redirection
-Version: 1.10-0
+Version: 1.12.1-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @IPV6 +libubus +libubox
 Conflicts: 
 Menu-Depends: 
@@ -100,7 +100,7 @@ Category: Network
 Repository: base
 Title: A loop-avoiding distance-vector routing protocol
 Maintainer: Gabriel Kerneis <gabriel@kerneis.info>, Baptiste Jonglez <openwrt-pkg@bitsofnetworks.org>, Nick Hainke <vincent@systemli.org>
-Source: babeld-1.10.tar.gz
+Source: babeld-1.12.1.tar.gz
 License: MIT
 LicenseFiles: LICENCE
 Type: ipkg
@@ -108,7 +108,7 @@ Description:   Babel is a loop-avoiding distance-vector routing protocol for IPv
   with fast convergence properties. It is based on the ideas in DSDV, AODV and
   Cisco's EIGRP, but is designed to work well not only in wired networks but
   also in wireless mesh networks, and has been extended with support for
-  overlay networks. Babel is in the process of becoming an IETF Standard.
+  overlay networks. Babel is an IETF standard protocol (RFC 8966).
 https://www.irif.fr/~jch/software/babel/
 Gabriel Kerneis <gabriel@kerneis.info>, Baptiste Jonglez <openwrt-pkg@bitsofnetworks.org>, Nick Hainke <vincent@systemli.org>
 @@
@@ -553,7 +553,7 @@ Build-Depends: ncurses readline
 
 Package: bird2
 Submenu: Routing and Redirection
-Version: 2.0.8-2
+Version: 2.0.10-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
 Conflicts: bird1-ipv4 bird1-ipv6 bird4 bird6
 Menu-Depends: 
@@ -563,7 +563,7 @@ Category: Network
 Repository: base
 Title: The BIRD Internet Routing Daemon (v2)
 Maintainer: Toke Høiland-Jørgensen <toke@toke.dk>
-Source: bird-2.0.8.tar.gz
+Source: bird-2.0.10.tar.gz
 License: GPL-2.0-or-later
 Type: ipkg
 Description: BIRD is an internet routing daemon which manages TCP/IP routing tables
@@ -589,7 +589,7 @@ Toke Høiland-Jørgensen <toke@toke.dk>
 
 Package: bird2c
 Submenu: Routing and Redirection
-Version: 2.0.8-2
+Version: 2.0.10-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +bird2 +libreadline +libncurses
 Conflicts: bird1c-ipv4 bird1c-ipv6 birdc4 birdc6
 Menu-Depends: 
@@ -599,7 +599,7 @@ Category: Network
 Repository: base
 Title: The BIRD command-line client (v2)
 Maintainer: Toke Høiland-Jørgensen <toke@toke.dk>
-Source: bird-2.0.8.tar.gz
+Source: bird-2.0.10.tar.gz
 License: GPL-2.0-or-later
 Type: ipkg
 Description: BIRD is an internet routing daemon which manages TCP/IP routing tables
@@ -621,7 +621,7 @@ Toke Høiland-Jørgensen <toke@toke.dk>
 
 Package: bird2cl
 Submenu: Routing and Redirection
-Version: 2.0.8-2
+Version: 2.0.10-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +bird2
 Conflicts: bird1cl-ipv4 bird1cl-ipv6 birdcl4 birdcl6
 Menu-Depends: 
@@ -631,7 +631,7 @@ Category: Network
 Repository: base
 Title: The BIRD lightweight command-line client (v2)
 Maintainer: Toke Høiland-Jørgensen <toke@toke.dk>
-Source: bird-2.0.8.tar.gz
+Source: bird-2.0.10.tar.gz
 License: GPL-2.0-or-later
 Type: ipkg
 Description: BIRD is an internet routing daemon which manages TCP/IP routing tables
@@ -929,7 +929,7 @@ Source-Makefile: feeds/routing/cjdns/Makefile
 
 Package: cjdns
 Submenu: Routing and Redirection
-Version: v21-1
+Version: v21.1-4
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!arc @IPV6 +kmod-tun +libnl-tiny +libpthread +librt +libuci-lua +lua-bencode +dkjson +luasocket +lua-sha2
 Conflicts: 
 Menu-Depends: 
@@ -939,7 +939,7 @@ Category: Network
 Repository: base
 Title: Encrypted near-zero-conf mesh routing protocol
 Maintainer: William Fleurant <meshnet@protonmail.com>
-Source: cjdns-v21.tar.gz
+Source: cjdns-v21.1.tar.gz
 License: GPL-3.0-or-later
 LicenseFiles: LICENSE
 Type: ipkg
@@ -950,7 +950,7 @@ William Fleurant <meshnet@protonmail.com>
 
 Package: cjdns-tests
 Submenu: Routing and Redirection
-Version: v21-1
+Version: v21.1-4
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +librt @!arc
 Conflicts: 
 Menu-Depends: 
@@ -960,7 +960,7 @@ Category: Network
 Repository: base
 Title: cjdns test cases
 Maintainer: William Fleurant <meshnet@protonmail.com>
-Source: cjdns-v21.tar.gz
+Source: cjdns-v21.1.tar.gz
 License: GPL-3.0-or-later
 LicenseFiles: LICENSE
 Type: ipkg
@@ -1159,7 +1159,7 @@ Source-Makefile: feeds/routing/luci-app-cjdns/Makefile
 
 Package: luci-app-cjdns
 Submenu: 3. Applications
-Version: 1.3-8
+Version: 1.3-9
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +cjdns +luci-compat +luci-base
 Conflicts: 
 Menu-Depends: 
@@ -1200,6 +1200,39 @@ Description:  mcproxy is a free & open source implementation of the IGMP/MLD pro
  as well as dynamically changing downstream interfaces.
 http://mcproxy.realmv6.org
 Steven Barth <cyrus@openwrt.org>
+@@
+
+
+Source-Makefile: feeds/routing/mesh11sd/Makefile
+
+Package: mesh11sd
+Submenu: Captive Portals
+Version: 1.1.1-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Dynamic 802.11s Mesh Configuration Daemon
+Maintainer: Rob White <rob@blue-wave.net>
+Source: mesh11sd-1.1.1.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   Mesh11sd is a dynamic parameter configuration daemon for 802.11s mesh networks.
+  It was originally designed to leverage 802.11s mesh networking at Captive Portal venues.
+  This is the open source version and it enables easy and automated mesh network operation with multiple mesh nodes.
+  It allows all mesh parameters supported by the wireless driver to be set in the uci config file.
+  Settings take effect immediately without having to restart the wireless network.
+  Default settings give rapid and reliable layer 2 mesh convergence.
+  Without mesh11sd, many mesh parameters cannot be set in the uci wireless config file as the mesh interface must be up before the parameters can be set.
+  Some of those that are supported, would fail to be implemented when the network is (re)started resulting in errors or dropped nodes.
+  The mesh11sd daemon dynamically checks configured parameters and sets them as required.
+  This version does not require a Captive Portal to be running.
+https://github.com/opennds/mesh11sd
+Rob White <rob@blue-wave.net>
 @@
 
 
@@ -1907,7 +1940,7 @@ Source-Makefile: feeds/routing/opennds/Makefile
 
 Package: opennds
 Submenu: Captive Portals
-Version: 9.6.0-1
+Version: 9.7.0-1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +iptables-mod-ipopt +libmicrohttpd-no-ssl
 Conflicts: nodogsplash nodogsplash2
 Menu-Depends: 
@@ -1917,17 +1950,18 @@ Category: Network
 Repository: base
 Title: Open public network gateway daemon
 Maintainer: Rob White <rob@blue-wave.net>
-Source: opennds-9.6.0.tar.gz
-License: GPL-2.0+
+Source: opennds-9.7.0.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
 Type: ipkg
-Description: 	openNDS is a Captive Portal solution that offers an instant way to provide restricted access to the Internet.
-	With little or no configuration, a dynamically generated and adaptive splash page sequence is automatically served.
-	Both client driven Captive Portal Detection (CPD) and gateway driven Captive Portal Identification (CPI - RFC 8910 and RFC 8908) are supported.
-	Internet access is granted by either a click to continue button, or after credential verification as a result of filling in a login form.
-	The package incorporates the FAS API allowing many flexible customisation options.
-	The creation of sophisticated third party authentication applications is fully supported.
-	Internet hosted https portals can be implemented with no security errors, to inspire maximum user confidence.
-	This version requires iptables (legacy).
+Description:   openNDS is a Captive Portal solution that offers an instant way to provide restricted access to the Internet.
+  With little or no configuration, a dynamically generated and adaptive splash page sequence is automatically served.
+  Both client driven Captive Portal Detection (CPD) and gateway driven Captive Portal Identification (CPI - RFC 8910 and RFC 8908) are supported.
+  Internet access is granted by either a click to continue button, or after credential verification as a result of filling in a login form.
+  The package incorporates the FAS API allowing many flexible customisation options.
+  The creation of sophisticated third party authentication applications is fully supported.
+  Internet hosted https portals can be implemented with no security errors, to inspire maximum user confidence.
+  This release requires iptables(legacy)
 https://github.com/opennds/opennds
 Rob White <rob@blue-wave.net>
 @@

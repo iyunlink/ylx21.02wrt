@@ -11,6 +11,7 @@ admin/netatop
 admin/netdata
 admin/nyx
 admin/openwisp-config
+admin/openwisp-monitoring
 admin/schroot
 admin/sudo
 admin/syslog-ng
@@ -942,6 +943,7 @@ net/ulogd
 net/umurmur
 net/unbound
 net/usbip
+net/usteer
 net/uwsgi
 net/vallumd
 net/vncrepeater
@@ -1216,6 +1218,7 @@ utils/tracertools
 utils/tree
 utils/triggerhappy
 utils/ttyd
+utils/ubnt-manager
 utils/uhubctl
 utils/uledd
 utils/unrar

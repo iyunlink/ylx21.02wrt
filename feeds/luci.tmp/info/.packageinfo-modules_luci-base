@@ -88,7 +88,7 @@ Config:
 	   tristate "Japanese (ja)" 
 
      config LUCI_LANG_ko
-	   tristate "Korean (ko)" 
+	   tristate "한국어 (Korean) (ko)" 
 
      config LUCI_LANG_mr
 	   tristate "Marathi (mr)" 
