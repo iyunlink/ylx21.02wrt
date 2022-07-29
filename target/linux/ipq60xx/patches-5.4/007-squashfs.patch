@@ -1,0 +1,32 @@
+Index: linux-5.4.164/drivers/mtd/mtdsplit/mtdsplit.c
+===================================================================
+--- linux-5.4.164.orig/drivers/mtd/mtdsplit/mtdsplit.c
++++ linux-5.4.164/drivers/mtd/mtdsplit/mtdsplit.c
+@@ -26,7 +26,7 @@
+ 
+ struct squashfs_super_block {
+ 	__le32 s_magic;
+-	__le32 pad0[9];
++	__le32 pad0[6];
+ 	__le64 bytes_used;
+ };
+ 
+Index: linux-5.4.164/fs/squashfs/squashfs_fs.h
+===================================================================
+--- linux-5.4.164.orig/fs/squashfs/squashfs_fs.h
++++ linux-5.4.164/fs/squashfs/squashfs_fs.h
+@@ -247,10 +247,12 @@ struct squashfs_super_block {
+ 	__le16			block_log;
+ 	__le16			flags;
+ 	__le16			no_ids;
+-	__le16			s_major;
++	// __le16			s_major;
++	__le64			bytes_used;
+ 	__le16			s_minor;
+ 	__le64			root_inode;
+-	__le64			bytes_used;
++	// __le64			bytes_used;
++	__le16			s_major;
+ 	__le64			id_table_start;
+ 	__le64			xattr_id_table_start;
+ 	__le64			inode_table_start;

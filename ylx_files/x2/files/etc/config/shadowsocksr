@@ -21,7 +21,7 @@ config server_subscribe
 	option auto_update '1'
 	option filter_words '过期时间/剩余流量/QQ群/官网/防失联地址/回国'
 	option switch '1'
-	option subscribe_url 'https://xxx.com/api/v1/client/subscribe?token=xxxxx'
+	list subscribe_url 'https://xxx.com/api/v1/client/subscribe?token=xxxxx'
 
 config access_control
 	option lan_ac_mode '0'

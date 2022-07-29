@@ -161,13 +161,13 @@ company_name=`uci get gargoyle.global.company_${lang}`
 		<div class="menuname"><cite class="m-icon08 sys-icon"></cite><%= $advance%></div>
 			<div class="children">
 			<ul>
-                <li>
+                <!-- <li>
                     <div class="menuname">
                         <a target="main_frame" href="/mpserver.asp">
                             <%= $mpserver%>
                         </a>
                     </div>
-                </li>
+                </li> -->
 				<li>
 				<div class="menuname">
 				<a target="main_frame" href="/dtu1.asp"><%= $dtu%></a></div>
