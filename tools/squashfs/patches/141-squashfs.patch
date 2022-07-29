@@ -1,0 +1,24 @@
+Index: squashfs3.0/squashfs-tools/squashfs_fs.h
+===================================================================
+--- squashfs3.0.orig/squashfs-tools/squashfs_fs.h
++++ squashfs3.0/squashfs-tools/squashfs_fs.h
+@@ -183,7 +183,8 @@ struct squashfs_super_block {
+ 	unsigned int		guid_start_2;
+ 	unsigned int		inode_table_start_2;
+ 	unsigned int		directory_table_start_2;
+-	unsigned int		s_major:16;
++	// unsigned int		s_major:16;
++	long long		bytes_used;
+ 	unsigned int		s_minor:16;
+ 	unsigned int		block_size_1:16;
+ 	unsigned int		block_log:16;
+@@ -195,7 +196,8 @@ struct squashfs_super_block {
+ 	unsigned int		block_size;
+ 	unsigned int		fragments;
+ 	unsigned int		fragment_table_start_2;
+-	long long		bytes_used;
++	// long long		bytes_used;
++	unsigned int		s_major:16;
+ 	long long		uid_start;
+ 	long long		guid_start;
+ 	long long		inode_table_start;
