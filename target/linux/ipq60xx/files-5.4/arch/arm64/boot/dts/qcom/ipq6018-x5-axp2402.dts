@@ -248,6 +248,7 @@
 			modem {
 				label = "modem";
 				gpios = <&tlmm 67 GPIO_ACTIVE_HIGH>;
+				default-state = "on";
 			};
 		};
 

@@ -1,18 +1,6 @@
 #!/bin/sh
 
-if [ "`fw_printenv hver|cut -d"=" -f2`"x = "v2"x ];then
-    path13="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.4"
-    path12="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.4"
-
-    path23="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.3"
-    path22="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.3"
-
-    path33="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.2"
-    path32="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.2"
-
-    path43="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.1"
-    path42="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.1"
-elif [ "`fw_printenv hver|cut -d"=" -f2`"x = "v3"x ];then
+if [ "`fw_printenv hver|cut -d"=" -f2`"x = "v3"x -o "`fw_printenv hver|cut -d"=" -f2`"x = "v2"x ];then
     path13="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.1"
     path12="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.1"
 
