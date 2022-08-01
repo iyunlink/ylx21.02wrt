@@ -1567,6 +1567,28 @@ define Device/youku_yk-l2
 endef
 TARGET_DEVICES += youku_yk-l2
 
+define Device/ylx_m21ax
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := ylx
+  DEVICE_MODEL := m21ax
+  DEVICE_PACKAGES := kmod-mt7915e kmod-usb3
+  SUPPORTED_DEVICES += ylx_m21ax
+endef
+TARGET_DEVICES += ylx_m21ax
+
+define Device/ylx_m212L
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := ylx
+  DEVICE_MODEL := m212L
+  DEVICE_PACKAGES := kmod-usb3
+  SUPPORTED_DEVICES += ylx_m212L
+endef
+TARGET_DEVICES += ylx_m212L
+
 define Device/zbtlink_zbt-we1326
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
