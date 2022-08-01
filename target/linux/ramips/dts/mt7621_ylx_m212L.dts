@@ -104,7 +104,7 @@
 			factory: partition@50000 {
 				label = "factory";
 				reg = <0x50000 0x40000>;
-				read-only;
+				// read-only;
 			};
 
 			firmware: partition@90000 {
