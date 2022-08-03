@@ -205,6 +205,21 @@ case $1 in
          cp bin/targets/ipq40xx/generic/x4-21.02-v1.0-ipq40xx-generic-m4pro-squashfs-nand-sysupgrade.bin firm/$btime-x4-zhongxing.bin
          cp bin/targets/ipq40xx/generic/x4-21.02-v1.0-ipq40xx-generic-m4pro-squashfs-nand-factory.ubi firm/$btime-x4-zhongxing.ubi
       ;;
+       m21ax)
+         if [ "$lastbuild" = "ipq60xx" ];then
+            rm -rf package/kernel/mac80211
+            tar zxvf package/kernel/mac80211.orig.tar.gz -C package/kernel/
+         else
+            echo "last build target is not x5"
+         fi
+         echo "ramips" > lastbuild  
+         rm -rf files
+         cp ylx_files/m21ax/m21ax.config .config
+         cp ylx_files/m21ax/files/ . -rf
+         make package/base-files/clean V=s
+         make V=s $2
+         cp bin/targets/ramips/mt7621/openwrt-ramips-mt7621-ylx_m21ax-squashfs-sysupgrade.bin firm/$btime-m21ax.bin
+      ;;
      *)
         echo "please input ./build.sh x5/x5sw7203/x511/q60/x8/x2/x4/x4_aodun/x4_zhongxing [-j4]."
         ;;
