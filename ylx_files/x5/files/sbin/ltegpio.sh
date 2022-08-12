@@ -25,7 +25,7 @@
 # sleep 5
 # # lte1,lte2,lte3,lte4 power up
 # i2cset -y -f 0 0x58 0x03 0xff 
-/sbin/checkusbhub.sh &
+/sbin/checkusbhub.sh 
 sleep 2
 
 for i in `seq 1 4`

@@ -8,19 +8,20 @@ check_usbhub(){
             echo out > /sys/class/gpio/gpio454/direction
             }
             echo 0 > /sys/class/gpio/gpio454/value
-            sleep 5
+            sleep 7
             echo 1 > /sys/class/gpio/gpio454/value
         else
             # echo "not v3 board"
             echo 0 > /sys/class/leds/modem/brightness
-            sleep 2
+            sleep 10
             echo 1 > /sys/class/leds/modem/brightness
         fi
+
+        sleep 10
     fi
 }
 
-while true;
+while ! lsusb |grep 05e3:0620
 do
     check_usbhub
-    sleep 5
 done
