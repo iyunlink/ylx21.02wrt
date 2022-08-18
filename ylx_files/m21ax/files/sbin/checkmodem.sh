@@ -46,8 +46,8 @@ uci set 4g.modem1.model="$model1"
 uci commit 4g
 uci commit config4g
 uci commit network
-
-/etc/init.d/config4g restart &
+sleep 2
+(/etc/init.d/config4g restart;/etc/init.d/config4g restart) &
 ifup lte1 
 
 
