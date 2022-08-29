@@ -175,7 +175,7 @@ fi
 # echo netdevice1:$netdevice1,netdevice2:$netdevice2,netdevice3:$netdevice3,netdevice4:$netdevice4
 
 case "$pid1" in
-    0620|4d22)
+    0620)
     uci set network.lte1.device="${netdevice1}_1"
     ;;
     *)
@@ -183,7 +183,7 @@ case "$pid1" in
     ;;
 esac
 case "$pid2" in
-    0620|4d22)
+    0620)
     uci set network.lte2.device="${netdevice2}_1"
     ;;
     *)
@@ -191,7 +191,7 @@ case "$pid2" in
     ;;
 esac
 case "$pid3" in
-    0620|4d22)
+    0620)
     uci set network.lte3.device="${netdevice3}_1"
     ;;
     *)
@@ -199,7 +199,7 @@ case "$pid3" in
     ;;
 esac
 case "$pid4" in
-    0620|4d22)
+    0620)
     uci set network.lte4.device="${netdevice4}_1"
     ;;
     *)
