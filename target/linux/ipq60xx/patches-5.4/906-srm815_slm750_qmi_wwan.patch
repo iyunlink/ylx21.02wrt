@@ -1,0 +1,35 @@
+--- a/drivers/net/usb/qmi_wwan.bak.c	2022-08-29 20:07:20.000000000 +0800
++++ b/drivers/net/usb/qmi_wwan.c	2022-08-29 20:07:39.000000000 +0800
+@@ -1041,6 +1041,9 @@
+ 		USB_DEVICE_AND_INTERFACE_INFO(0x03f0, 0x581d, USB_CLASS_VENDOR_SPEC, 1, 7),
+ 		.driver_info = (unsigned long)&qmi_wwan_info,
+ 	},
++	{ QMI_FIXED_INTF(0x05c6, 0xf601, 5) }, /* MeigLink SLM750 SLM730 SLM750VR2.0*/
++    { QMI_FIXED_INTF(0x2dee, 0x4d22, 5) }, /*MeigLink SRM815*/
++
+ 	{QMI_MATCH_FF_FF_FF(0x2c7c, 0x0125)},	/* Quectel EC25, EC20 R2.0  Mini PCIe */
+ 	{QMI_MATCH_FF_FF_FF(0x2c7c, 0x0306)},	/* Quectel EP06/EG06/EM06 */
+ 	{QMI_MATCH_FF_FF_FF(0x2c7c, 0x0512)},	/* Quectel EG12/EM12 */
+@@ -1439,6 +1442,22 @@
+ 	    dev->actconfig->desc.bNumInterfaces == 5)
+ 		return true;
+ 
++	/*zhangqingyun add start */
++	if (dev->actconfig &&
++	    le16_to_cpu(dev->descriptor.idVendor) == 0x05c6 &&
++	    le16_to_cpu(dev->descriptor.idProduct) == 0xf601 &&
++	    dev->actconfig->desc.bNumInterfaces == 5) {
++		dev_dbg(&intf->dev, "zhangqingyun detemine interface 5 is ndis port");
++		return true;
++	}
++        if (dev->actconfig && 
++            le16_to_cpu(dev->descriptor.idVendor) == 0x2dee &&
++            le16_to_cpu(dev->descriptor.idProduct) == 0x4d22 &&
++            dev->actconfig->desc.bNumInterfaces == 5){
++                dev_dbg(&intf->dev, "zhangqingyun detemine interface 5 is ndis port");
++                return true;
++        }
++	/*zhangqingyun add end*/
+ 	return false;
+ }
+ 
