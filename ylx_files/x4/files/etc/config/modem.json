@@ -85,7 +85,7 @@
         "name": "SLM750",
         "netDev":"1.5",
         "atDev": "1.2",
-        "dMothed": "quectel-CM"
+        "dMothed": "meige-CM"
     },
     "V2c7cP030a": {
         "name": "EM05G",

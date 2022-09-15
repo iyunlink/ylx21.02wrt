@@ -215,7 +215,7 @@ ifdown lte4
 [ -f /sys/class/net/$netdevice1/qmi/raw_ip ] && echo Y > /sys/class/net/$netdevice1/qmi/raw_ip
 [ -f /sys/class/net/$netdevice2/qmi/raw_ip ] && echo Y > /sys/class/net/$netdevice2/qmi/raw_ip
 [ -f /sys/class/net/$netdevice3/qmi/raw_ip ] && echo Y > /sys/class/net/$netdevice3/qmi/raw_ip
-[ -f /sys/class/net/$netdevice1/qmi/raw_ip ] && echo Y > /sys/class/net/$netdevice4/qmi/raw_ip
+[ -f /sys/class/net/$netdevice4/qmi/raw_ip ] && echo Y > /sys/class/net/$netdevice4/qmi/raw_ip
 
 uci set config4g.4G.netdevice="$netdevice1"
 uci set config4g.4G1.netdevice="$netdevice2"
