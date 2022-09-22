@@ -4,6 +4,7 @@ START=99
 USE_PROCD=1
 #使用procd启动
 CM="/bin/quectel-CM"
+index=0
 
 run_4g()
 {
@@ -58,7 +59,15 @@ run_4g()
             procd_close_instance
             #关闭实例
         fi
-
+        cpuindex=$((1<<$index))
+        index=$(($index+1))
+        echo "cpuindex now is: $cpuindex"
+        [ -f /sys/class/net/$netdevice/queues/rx-0/rps_cpus ] && {
+            echo $cpuindex > /sys/class/net/$netdevice/queues/rx-0/rps_cpus
+        }
+        [ -f /sys/class/net/${netdevice}_1/queues/rx-0/rps_cpus ] && {
+            echo $cpuindex > /sys/class/net/$netdevice/queues/rx-0/rps_cpus
+        }
     fi
 }
 

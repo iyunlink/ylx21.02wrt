@@ -4,6 +4,7 @@ START=99
 USE_PROCD=1
 #使用procd启动
 CM="/bin/quectel-CM"
+index=0
 
 run_4g()
 {
@@ -32,6 +33,14 @@ run_4g()
         config_get tty $1 tty
         config_get atcmd $1 atcmd
         if [ "$tool" = "at" ];then
+            if [ "$atcmd" = "AT+NWNETSHAREACT=1,1,1" ];then
+             at_tool "AT+NWNETSHAREACT=1,0,0" -d $tty  
+             sleep 1
+            fi 
+            if [ "$atcmd" = "AT+QNETDEVCTL=1,1,1" ];then
+             at_tool "AT+QNETDEVCTL=1,0,0" -d $tty  
+             sleep 1
+            fi  
         at_tool "$atcmd" -d $tty
         else
             procd_open_instance
@@ -50,7 +59,15 @@ run_4g()
             procd_close_instance
             #关闭实例
         fi
-
+        cpuindex=$((1<<$index))
+        index=$(($index+1))
+        echo "cpuindex now is: $cpuindex"
+        [ -f /sys/class/net/$netdevice/queues/rx-0/rps_cpus ] && {
+            echo $cpuindex > /sys/class/net/$netdevice/queues/rx-0/rps_cpus
+        }
+        [ -f /sys/class/net/${netdevice}_1/queues/rx-0/rps_cpus ] && {
+            echo $cpuindex > /sys/class/net/$netdevice/queues/rx-0/rps_cpus
+        }
     fi
 }
 
