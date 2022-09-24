@@ -174,38 +174,36 @@ fi
 }
 # echo netdevice1:$netdevice1,netdevice2:$netdevice2,netdevice3:$netdevice3,netdevice4:$netdevice4
 
-case "$pid1" in
-    0620)
-    uci set network.lte1.device="${netdevice1}_1"
-    ;;
-    *)
+
+
     uci set network.lte1.device="${netdevice1}"
-    ;;
-esac
-case "$pid2" in
-    0620)
-    uci set network.lte2.device="${netdevice2}_1"
-    ;;
-    *)
+    uci set network.lte1.ifname="${netdevice1}"
     uci set network.lte2.device="${netdevice2}"
-    ;;
-esac
-case "$pid3" in
-    0620)
-    uci set network.lte3.device="${netdevice3}_1"
-    ;;
-    *)
+    uci set network.lte2.ifname="${netdevice2}"
     uci set network.lte3.device="${netdevice3}"
-    ;;
-esac
-case "$pid4" in
-    0620)
-    uci set network.lte4.device="${netdevice4}_1"
-    ;;
-    *)
+    uci set network.lte3.ifname="${netdevice3}"
     uci set network.lte4.device="${netdevice4}"
-    ;;
-esac
+    uci set network.lte4.ifname="${netdevice4}"
+
+    [ -d /sys/class/net/${netdevice1}_1 ] &&{
+        uci set network.lte1.device="${netdevice1}_1"
+        uci set network.lte1.ifname="${netdevice1}_1"
+    }
+
+    [ -d /sys/class/net/${netdevice2}_1 ] &&{
+        uci set network.lte2.device="${netdevice2}_1"
+        uci set network.lte2.ifname="${netdevice2}_1"
+    }
+
+    [ -d /sys/class/net/${netdevice3}_1 ] &&{
+        uci set network.lte3.device="${netdevice3}_1"
+        uci set network.lte3.ifname="${netdevice3}_1"
+    }
+
+    [ -d /sys/class/net/${netdevice4}_1 ] &&{
+        uci set network.lte4.device="${netdevice4}_1"
+        uci set network.lte4.ifname="${netdevice4}_1"
+    }
 
 /etc/init.d/config4g stop
 ifdown lte1
@@ -251,7 +249,6 @@ uci commit lte_info
 uci commit 4g
 uci commit config4g
 uci commit network
-
 cp /etc/config/lte_info /tmp/lte_info
 /etc/init.d/config4g restart 
 /etc/init.d/net_ttyipq restart 

@@ -111,3 +111,5 @@ uci commit dhcp
 cp /etc/uhttpd.conf.gargoyle /etc/config/uhttpd
 
 /etc/init.d/uhttpd restart &
+
+(sleep 30; /sbin/checkmodem.sh) &
