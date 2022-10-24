@@ -5,7 +5,26 @@ lastbuild=`cat lastbuild`
 
 btime=`date +%Y-%m-%d`
 case $1 in
-     x5)
+     x5emmc)
+         if [ "$lastbuild" = "ipq60xx" ];then
+            echo "last build target is also ipq60xx"
+         else
+            rm -rf package/kernel/mac80211
+            tar zxvf package/kernel/mac80211.ipq60xx.tar.gz -C package/kernel/
+         fi
+         echo "ipq60xx" > lastbuild   
+         rm -rf files
+         cp ylx_files/x5/x5.config .config
+         cp ylx_files/x5/files/ . -rf
+         make package/base-files/clean V=s
+         make package/link4all/lvglipq_x8/clean V=s
+         cp logo/logo_linux_clut224.ppm.5g build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/drivers/video/logo/logo_linux_clut224.ppm
+         cp ./build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/arch/arm64/boot/dts/qcom/ipq6018-x5-axp2402.emmc.dts ./build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/arch/arm64/boot/dts/qcom/ipq6018-x5.dts
+         make V=s $2
+         cp bin/targets/ipq60xx/generic/x5-21.02-v1.0-ipq60xx-generic-ylx_x5-squashfs-nand-sysupgrade.bin firm/$btime-x5emmc.bin
+         cp bin/targets/ipq60xx/generic/x5-21.02-v1.0-ipq60xx-generic-ylx_x5-squashfs-nand-factory.ubi  firm/$btime-x5emmc.ubi
+      ;;
+       x5)
          if [ "$lastbuild" = "ipq60xx" ];then
             echo "last build target is also ipq60xx"
          else
@@ -42,6 +61,25 @@ case $1 in
          make V=s $2
          cp bin/targets/ipq60xx/generic/x5-21.02-v1.0-ipq60xx-generic-ylx_x5-squashfs-nand-sysupgrade.bin firm/$btime-x5sw7203.bin
          cp bin/targets/ipq60xx/generic/x5-21.02-v1.0-ipq60xx-generic-ylx_x5-squashfs-nand-factory.ubi  firm/$btime-x5sw7203.ubi
+      ;;
+      x5sw7203emmc)
+         if [ "$lastbuild" = "ipq60xx" ];then
+            echo "last build target is also ipq60xx"
+         else
+            rm -rf package/kernel/mac80211
+            tar zxvf package/kernel/mac80211.ipq60xx.tar.gz -C package/kernel/
+         fi
+         echo "ipq60xx" > lastbuild   
+         rm -rf files
+         cp ylx_files/x5/x5.sw7203.config .config
+         cp ylx_files/x5/files/ . -rf
+         make package/base-files/clean V=s
+         make package/link4all/lvglipq_x8/clean V=s
+         cp logo/logo_linux_clut224.ppm.5g build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/drivers/video/logo/logo_linux_clut224.ppm
+         cp ./build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/arch/arm64/boot/dts/qcom/ipq6018-x5-sw7203.emmc.dts ./build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/arch/arm64/boot/dts/qcom/ipq6018-x5.dts
+         make V=s $2
+         cp bin/targets/ipq60xx/generic/x5-21.02-v1.0-ipq60xx-generic-ylx_x5-squashfs-nand-sysupgrade.bin firm/$btime-x5sw7203emmc.bin
+         cp bin/targets/ipq60xx/generic/x5-21.02-v1.0-ipq60xx-generic-ylx_x5-squashfs-nand-factory.ubi  firm/$btime-x5sw7203emmc.ubi
       ;;
       x511)
          if [ "$lastbuild" = "ipq60xx" ];then
